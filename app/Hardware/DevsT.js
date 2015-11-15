@@ -24,12 +24,12 @@ function DevsT() {
             switch (d.type) {
                 case 'd': {
 //                        devs.push();
-                    self.devs.push(new int.GPIO(devData.port, d.dir, init));
+                    devs.push(new int.GPIO(devData.port, d.dir, init));
                     break;
                 }
                 case 'a': {
 //                        devs.push();
-                    self.devs.push(new int.AIO(devData.port));
+                    devs.push(new int.AIO(devData.port));
                     break;
                 }
             }
