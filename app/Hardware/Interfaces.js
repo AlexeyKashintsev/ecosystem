@@ -38,7 +38,7 @@ function Interfaces() {
         if (dir == 'out')
             gpio.write(state);
         
-        object.defineProperty(this, 'value', {
+        Object.defineProperty(this, 'value', {
             set: function(aValue) {
                 if (dir === 'out') {
                     gpio.write(aValue);
@@ -64,7 +64,7 @@ function Interfaces() {
             aio.readFloat();
         };
         
-        object.defineProperty(this, 'value', {
+        Object.defineProperty(this, 'value', {
             get: this.getInt
         });
     };
@@ -77,7 +77,7 @@ function Interfaces() {
             i2c.address(anAdr);
         }
         
-        object.defineProperty(this, 'address', {
+        Object.defineProperty(this, 'address', {
             get: this.getInt
         });
     };
