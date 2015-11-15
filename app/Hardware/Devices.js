@@ -18,19 +18,19 @@ function Devices() {
         aIn:    {type: 'a'}
     };
     
-    self.addDev = function(devType, port, init) {
-        var d = devTypes[devType];
+    self.addDev = function(devData, init) {
+        var d = devTypes[devData.type];
         if (d) {
             var res = devs.length;
             switch (d.type) {
                 case 'd': {
 //                        devs.push();
-                    devs.push(new int.GPIO(port, d.dir, init));
+                    devs.push(new int.GPIO(devData.port, d.dir, init));
                     break;
                 }
                 case 'a': {
 //                        devs.push();
-                    devs.push(new int.AIO(port));
+                    devs.push(new int.AIO(devData.port));
                     break;
                 }
             }

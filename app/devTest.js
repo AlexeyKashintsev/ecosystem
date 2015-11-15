@@ -45,7 +45,7 @@ function devTest() {
             port: +form.tfPort.text,
             value: form.defVal.value
         };
-        servDevs.addDev(dd.type, dd.port, dd.value, function(res) {
+        servDevs.addDev(dd, dd.value, function(res) {
             addDev(res, dd);
         });
     };
