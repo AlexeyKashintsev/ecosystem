@@ -43,6 +43,22 @@ function DevsT() {
             return null;
     };
     
+    self.setDevVal = function(devData, init) {
+        var d = devTypes[devData.type];
+        switch (d.type) {
+                case 'd': {
+                    var dev = new int.GPIO(devData.port, d.dir, init);
+                    dev.type = d;
+                    break;
+                }
+                case 'a': {
+                    var dev = new int.AIO(devData.port);
+                    dev.type = d;
+                    break;
+                }
+            }
+    };
+    
     
     self.devGetValue = function(devId) {
         return devs[devId].value;
