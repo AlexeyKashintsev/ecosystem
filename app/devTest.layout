@@ -3,19 +3,19 @@
   <ModelGrid cursor="0" name="mgDevs" parent="view" prefHeight="217px" prefWidth="689px">
     <AnchorsPaneConstraints bottom="105px" left="0px" right="0px" top="0px"/>
     <ModelGridColumn name="colDevId" title="column" width="137px">
-      <ModelFormattedField/>
+      <ModelFormattedField format=""/>
     </ModelGridColumn>
-    <ModelGridColumn name="colDevName" title="column" width="137px">
-      <ModelFormattedField/>
+    <ModelGridColumn name="colDevName" title="column" width="138px">
+      <ModelFormattedField format=""/>
     </ModelGridColumn>
     <ModelGridColumn name="colDevType" title="column" width="137px">
-      <ModelFormattedField/>
+      <ModelFormattedField format=""/>
     </ModelGridColumn>
-    <ModelGridColumn name="colDevPort" title="column" width="137px">
-      <ModelFormattedField/>
+    <ModelGridColumn name="colDevPort" title="column" width="138px">
+      <ModelFormattedField format=""/>
     </ModelGridColumn>
     <ModelGridColumn name="colValue" title="column" width="137px">
-      <ModelFormattedField/>
+      <ModelFormattedField format=""/>
     </ModelGridColumn>
   </ModelGrid>
   <ModelCombo cursor="0" name="mcDevTSelect" parent="view" prefHeight="26px" prefWidth="190px">
@@ -46,6 +46,12 @@
     <AnchorsPaneConstraints bottom="17px" height="20px" left="310px" width="110px"/>
   </Button>
   <Button cursor="0" name="btnClearAll" parent="view" prefHeight="20px" prefWidth="110px" text="Удалить все">
-    <AnchorsPaneConstraints bottom="17px" height="20px" right="49px" width="110px"/>
+    <AnchorsPaneConstraints bottom="15px" height="20px" right="49px" width="110px"/>
+  </Button>
+  <Button cursor="0" name="btnSave" parent="view" prefHeight="20px" prefWidth="90px" text="Сохранить">
+    <AnchorsPaneConstraints bottom="15px" height="20px" left="430px" width="90px"/>
+  </Button>
+  <Button cursor="0" name="btnImportFromDb" parent="view" prefHeight="20px" prefWidth="120px" text="Загрузить из БД">
+    <AnchorsPaneConstraints bottom="42px" height="20px" left="400px" width="120px"/>
   </Button>
 </layout>

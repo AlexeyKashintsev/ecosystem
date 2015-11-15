@@ -1,3 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<datamodel>
+<?xml version="1.0" encoding="UTF-8"?><datamodel>
+  <entity Name="qDevices" Title="" entityHeight="200" entityIconified="false" entityId="144756484583236" entityLocationX="32" entityLocationY="17" entityWidth="150" queryId="qDevices" tableName="" tableSchemaName=""/>
+  <entity Name="qTypes" Title="" entityHeight="200" entityIconified="false" entityId="144756485023508" entityLocationX="224" entityLocationY="16" entityWidth="150" queryId="qTypes" tableName="" tableSchemaName=""/>
+  <referenceRelation leftEntityFieldName="type" leftEntityId="144756484583236" rightEntityFieldName="eco_dev_types_id" rightEntityId="144756484583236"/>
+  <referenceRelation leftEntityFieldName="type" leftEntityId="144756484583236" rightEntityFieldName="eco_dev_types_id" rightEntityId="144756485023508"/>
 </datamodel>
