@@ -1,7 +1,7 @@
 /**
  * 
  * @author Alexey
- * @resident
+ * @statefull
  * @constructor 
  */
 function WholeServer() {
