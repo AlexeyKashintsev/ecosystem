@@ -46,4 +46,21 @@ function Devices() {
     self.setDevValue = function(devId, value) {
         devs[devId].value = value;
     };
+    
+    self.getAllValues = function() {
+        var res = [];
+        for (var j in devs)
+            res[j] = devs[j].value;
+        return res;
+    };
+    
+    self.clearAll = function() {
+        for (var j in devs)
+            try {
+                devs[j].value = null;
+            } catch (e) {
+                P.Logger.warning('Cannot set dev value to null. Error: ' + e);
+            }
+        devs = [];
+    };
 }

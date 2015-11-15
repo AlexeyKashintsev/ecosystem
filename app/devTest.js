@@ -34,7 +34,7 @@ function devTest() {
     
     function addDev(aDevId, aDevPar) {
         aDevPar.id = aDevId;
-        devs.push(aDevPar);
+        devs[aDevId] = aDevPar;
         form.mgDevs.data = null;
         form.mgDevs.data = devs;
     }
@@ -47,6 +47,29 @@ function devTest() {
         };
         servDevs.addDev(dd.type, dd.port, dd.value, function(res) {
             addDev(res, dd);
+        });
+    };
+    
+    form.btnGetValues.onActionPerformed = function(event) {
+        servDevs.getAllValues(function(aRes) {
+            for (var j in aRes) {
+                devs[j].value = aRes[j];
+            }
+            form.mgDevs.data = null;
+            form.mgDevs.data = devs;
+        });
+    };
+    
+    form.btnSetValue.onActionPerformed = function(event) {
+        var curDevId = form.mgDevs.selected[0].id;
+        servDevs.setDevValue(curDevId, form.newVal.value);
+    };
+    
+    form.btnClearAll.onActionPerformed = function(event) {
+        servDevs.clearAll(function() {
+            devs = [];
+            form.mgDevs.data = null;
+            form.mgDevs.data = devs;
         });
     };
 }

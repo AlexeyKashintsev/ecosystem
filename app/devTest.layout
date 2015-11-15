@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><layout title="" view="view">
-  <AnchorsPane background="#ffffff" cursor="0" name="view" prefHeight="300px" prefWidth="689px"/>
-  <ModelGrid cursor="0" name="mgDevs" parent="view" prefHeight="200px" prefWidth="689px">
-    <AnchorsPaneConstraints height="200px" left="0px" right="0px" top="0px"/>
+  <AnchorsPane background="#ffffff" cursor="0" name="view" prefHeight="322px" prefWidth="689px"/>
+  <ModelGrid cursor="0" name="mgDevs" parent="view" prefHeight="217px" prefWidth="689px">
+    <AnchorsPaneConstraints bottom="105px" left="0px" right="0px" top="0px"/>
     <ModelGridColumn name="colDevId" title="column" width="137px">
       <ModelFormattedField/>
     </ModelGridColumn>
@@ -33,7 +33,19 @@
   <Button cursor="0" name="button" parent="view" prefHeight="20px" prefWidth="110px" text="Добавить">
     <AnchorsPaneConstraints bottom="67px" height="20px" right="49px" width="110px"/>
   </Button>
-  <ModelCheckBox cursor="0" name="defVal" parent="view" prefHeight="26px" prefWidth="151px" text="Значение">
-    <AnchorsPaneConstraints bottom="64px" height="26px" left="370px" width="151px"/>
+  <ModelCheckBox cursor="0" name="newVal" parent="view" prefHeight="26px" prefWidth="141px" text="Значение">
+    <AnchorsPaneConstraints bottom="14px" height="26px" left="160px" width="141px"/>
   </ModelCheckBox>
+  <Button cursor="0" name="btnGetValues" parent="view" prefHeight="20px" prefWidth="140px" text="Прочитать">
+    <AnchorsPaneConstraints bottom="17px" height="20px" left="10px" width="140px"/>
+  </Button>
+  <ModelCheckBox cursor="0" name="defVal" parent="view" prefHeight="26px" prefWidth="141px" text="Значение">
+    <AnchorsPaneConstraints bottom="64px" height="26px" left="390px" width="141px"/>
+  </ModelCheckBox>
+  <Button cursor="0" name="btnSetValue" parent="view" prefHeight="20px" prefWidth="110px" text="Установить">
+    <AnchorsPaneConstraints bottom="17px" height="20px" left="310px" width="110px"/>
+  </Button>
+  <Button cursor="0" name="btnClearAll" parent="view" prefHeight="20px" prefWidth="110px" text="Удалить все">
+    <AnchorsPaneConstraints bottom="17px" height="20px" right="49px" width="110px"/>
+  </Button>
 </layout>
