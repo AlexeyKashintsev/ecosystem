@@ -1,3 +1,4 @@
 .DS_Store
 web
-WEB-INF
+/WEB-INF/lib
+!/WEB-INF/web.xml
