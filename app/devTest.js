@@ -14,8 +14,8 @@ function devTest() {
         form.show();
     };
     
-    var server = new P.ServerModule('WholeServer');
-    var cloudManager = new P.ServerModule('CloudManager');
+    var devsServ = new P.ServerModule('DevsT');
+//    var cloudManager = new P.ServerModule('Clou__dManager');
     
     var devTypes = [
         {typeId: 'dIn', typeName: 'Цифровой вход'},
@@ -46,13 +46,13 @@ function devTest() {
             port: +form.tfPort.text,
             value: form.defVal.value
         };
-        server.devAdd(dd, dd.value, function(res) {
+        devsServ.addDev(dd, dd.value, function(res) {
             addDev2Grid(res, dd);
         });
     };
     
     form.btnGetValues.onActionPerformed = function(event) {
-        server.devGetAllValues(function(aRes) {
+        devsServ.getAllValues(function(aRes) {
             for (var j in aRes) {
                 devs[j].value = aRes[j];
             }
@@ -63,35 +63,35 @@ function devTest() {
     
     form.btnSetValue.onActionPerformed = function(event) {
         var curDevId = form.mgDevs.selected[0].id;
-        server.devSetValue(curDevId, form.newVal.value);
+        devsServ.setDevValue(curDevId, form.newVal.value);
     };
     
     form.btnClearAll.onActionPerformed = function(event) {
-        server.clearAll(function() {
+        devsServ.clearAll(function() {
             devs = [];
             form.mgDevs.data = null;
             form.mgDevs.data = devs;
         });
     };
 
-    form.btnSave.onActionPerformed = function(event) {
-        console.log(devs);
-        cloudManager.uploadDevList(devs);
-    };
-
-    form.btnImportFromDb.onActionPerformed = function(event) {
-        cloudManager.getDevList(function(res){
-            devs = res;
-            console.log(devs);
-            form.mgDevs.data = devs;
-            var dd = {
-                type: devs.type,
-                port: +devs.port,
-                value: null
-            };
-            servDevs.addDev(dd, dd.value, function(res) {
-                //addDev(res, dd);
-            });
-        });
-    };
+//    form.btnSave.onActionPerformed = function(event) {
+//        console.log(devs);
+//        cloudManager.uploadDevList(devs);
+//    };
+//
+//    form.btnImportFromDb.onActionPerformed = function(event) {
+//        cloudManager.getDevList(function(res){
+//            devs = res;
+//            console.log(devs);
+//            form.mgDevs.data = devs;
+//            var dd = {
+//                type: devs.type,
+//                port: +devs.port,
+//                value: null
+//            };
+////            servDevs.addDev(dd, dd.value, function(res) {
+////                //addDev(res, dd);
+////            });
+//        });
+//    };
 }

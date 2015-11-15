@@ -1,10 +1,10 @@
 /**
  * 
  * @author Alexey
- * @statefull
+ * @__statefull
  * @constructor 
  */
-function WholeServer() {
+function __WholeServer() {
     var self = this, model = P.loadModel(this.constructor.name);
     
     var devMod = new Devices();

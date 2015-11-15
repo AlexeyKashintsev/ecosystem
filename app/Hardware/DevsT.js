@@ -1,15 +1,13 @@
-/* global P */
-
 /**
  * 
  * @author Alexey
  * @public 
  * @constructor
- * @statefull
  */
-function Devices() {
+function DevsT() {
     var self = this;
-//    var int = new __Interfaces();
+
+    var int = new Interfaces();
     
     var devs = [];
     
@@ -25,13 +23,13 @@ function Devices() {
             var res = devs.length;
             switch (d.type) {
                 case 'd': {
-                        devs.push();
-//                    self.devs.push(new int.GPIO(devData.port, d.dir, init));
+//                        devs.push();
+                    self.devs.push(new int.GPIO(devData.port, d.dir, init));
                     break;
                 }
                 case 'a': {
-                        devs.push();
-//                    self.devs.push(new int.AIO(devData.port));
+//                        devs.push();
+                    self.devs.push(new int.AIO(devData.port));
                     break;
                 }
             }
@@ -64,10 +62,4 @@ function Devices() {
             }
         devs = [];
     };
-    
-    self.dev_Add = self.addDev;
-    self.dev_Clear = self.clearAll;
-//    self.devGetValue = self.devGetValue;
-    self.dev_SetValue = self.setDevValue;
-    self.dev_GetAllValues = self.getAllValues;
 }
