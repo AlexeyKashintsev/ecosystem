@@ -46,13 +46,13 @@ function devTest() {
             port: +form.tfPort.text,
             value: form.defVal.value
         };
-        server.addDev(dd, dd.value, function(res) {
+        server.devAdd(dd, dd.value, function(res) {
             addDev2Grid(res, dd);
         });
     };
     
     form.btnGetValues.onActionPerformed = function(event) {
-        server.getAllValues(function(aRes) {
+        server.devGetAllValues(function(aRes) {
             for (var j in aRes) {
                 devs[j].value = aRes[j];
             }
@@ -63,7 +63,7 @@ function devTest() {
     
     form.btnSetValue.onActionPerformed = function(event) {
         var curDevId = form.mgDevs.selected[0].id;
-        server.setDevValue(curDevId, form.newVal.value);
+        server.devSetValue(curDevId, form.newVal.value);
     };
     
     form.btnClearAll.onActionPerformed = function(event) {
