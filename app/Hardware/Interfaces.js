@@ -3,7 +3,6 @@
 /**
  * 
  * @author Alexey
- * @re_sident
  * @constructor 
  */
 function Interfaces() {

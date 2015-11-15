@@ -3,14 +3,14 @@
 /**
  * 
  * @author Alexey
- * @statefull
  * @public 
  * @constructor
  */
 function Devices() {
     var self = this;
-    var devs = [];
     var int = new Interfaces();
+    
+    self.devs = [];
     
     var devTypes = {
         dIn:    {dir: 'in', type: 'd'},
@@ -21,16 +21,16 @@ function Devices() {
     self.addDev = function(devData, init) {
         var d = devTypes[devData.type];
         if (d) {
-            var res = devs.length;
+            var res = self.devs.length;
             switch (d.type) {
                 case 'd': {
 //                        devs.push();
-                    devs.push(new int.GPIO(devData.port, d.dir, init));
+                    self.devs.push(new int.GPIO(devData.port, d.dir, init));
                     break;
                 }
                 case 'a': {
 //                        devs.push();
-                    devs.push(new int.AIO(devData.port));
+                    self.devs.push(new int.AIO(devData.port));
                     break;
                 }
             }
@@ -40,27 +40,27 @@ function Devices() {
     };
     
     self.devGetValue = function(devId) {
-        return devs[devId].value;
+        return self.devs[devId].value;
     };
     
     self.setDevValue = function(devId, value) {
-        devs[devId].value = value;
+        self.devs[devId].value = value;
     };
     
     self.getAllValues = function() {
         var res = [];
-        for (var j in devs)
-            res[j] = devs[j].value;
+        for (var j in self.devs)
+            res[j] = self.devs[j].value;
         return res;
     };
     
     self.clearAll = function() {
-        for (var j in devs)
+        for (var j in self.devs)
             try {
-                devs[j].value = null;
+                self.devs[j].value = null;
             } catch (e) {
                 P.Logger.warning('Cannot set dev value to null. Error: ' + e);
             }
-        devs = [];
+        self.devs = [];
     };
 }

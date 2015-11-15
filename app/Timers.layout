@@ -1,6 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?><layout title="" view="view">
-  <AnchorsPane background="#ffffff" cursor="0" name="view" prefHeight="300px" prefWidth="400px"/>
-  <ModelGrid cursor="0" name="modelGrid" parent="view" prefHeight="300px" prefWidth="160px">
-    <AnchorsPaneConstraints height="300px" left="0px" top="0px" width="160px"/>
+  <AnchorsPane background="#ffffff" cursor="0" name="view" prefHeight="300px" prefWidth="545px"/>
+  <ModelGrid cursor="0" data="qTimers" name="mgActions" parent="view" prefHeight="270px" prefWidth="270px">
+    <AnchorsPaneConstraints height="270px" left="0px" top="30px" width="270px"/>
+    <ModelGridColumn field="timer_name" name="colTimer_name" title="colTimer_name" width="84px">
+      <ModelFormattedField/>
+    </ModelGridColumn>
+    <ModelGridColumn field="time" name="colTime" title="colTime" width="84px">
+      <ModelDate format="dd.MM.yyyy HH:mm:ss.SSS"/>
+    </ModelGridColumn>
+    <ModelGridColumn field="accurancy" name="colAccurancy" title="colAccurancy" width="83px">
+      <ModelSpin max="1.7976931348623157E308" min="-1.7976931348623157E308"/>
+    </ModelGridColumn>
   </ModelGrid>
+  <ModelGrid cursor="0" data="qActCon" name="modelGrid1" parent="view" prefHeight="230px" prefWidth="270px">
+    <AnchorsPaneConstraints bottom="40px" left="270px" right="5px" top="30px"/>
+    <ModelGridColumn field="acts" name="column" title="column" width="251px">
+      <ModelCombo displayField="action_name" displayList="qActions"/>
+    </ModelGridColumn>
+  </ModelGrid>
+  <Button cursor="0" name="btnAddTimer" parent="view" prefHeight="20px" prefWidth="90px" text="Add timer">
+    <AnchorsPaneConstraints height="20px" left="0px" top="10px" width="90px"/>
+  </Button>
+  <Button cursor="0" name="addAction" parent="view" prefHeight="20px" prefWidth="100px" text="Add Action">
+    <AnchorsPaneConstraints height="20px" left="270px" top="10px" width="100px"/>
+  </Button>
+  <Button cursor="0" name="button" parent="view" prefHeight="20px" prefWidth="110px" text="сохранить">
+    <AnchorsPaneConstraints bottom="10px" height="20px" left="310px" width="110px"/>
+  </Button>
+  <Button cursor="0" name="btnCancel" parent="view" prefHeight="20px" prefWidth="70px" text="Отмена">
+    <AnchorsPaneConstraints bottom="10px" height="20px" right="25px" width="70px"/>
+  </Button>
+  <Button cursor="0" name="btn2Edison" parent="view" prefHeight="20px" prefWidth="70px" text="Залить">
+    <AnchorsPaneConstraints height="20px" right="5px" top="0px" width="70px"/>
+  </Button>
 </layout>

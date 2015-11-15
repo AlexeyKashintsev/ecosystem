@@ -14,7 +14,7 @@ function devTest() {
         form.show();
     };
     
-    var servDevs = new P.ServerModule('Devices');
+    var server = new P.ServerModule('WholeServer');
     
     var devTypes = [
         {typeId: 'dIn', typeName: 'Цифровой вход'},
@@ -32,7 +32,7 @@ function devTest() {
     form.mgDevs.colDevPort.field = "port";    
     
     
-    function addDev(aDevId, aDevPar) {
+    function addDev2Grid(aDevId, aDevPar) {
         aDevPar.id = aDevId;
         devs[aDevId] = aDevPar;
         form.mgDevs.data = null;
@@ -45,13 +45,13 @@ function devTest() {
             port: +form.tfPort.text,
             value: form.defVal.value
         };
-        servDevs.addDev(dd, dd.value, function(res) {
-            addDev(res, dd);
+        server.addDev(dd, dd.value, function(res) {
+            addDev2Grid(res, dd);
         });
     };
     
     form.btnGetValues.onActionPerformed = function(event) {
-        servDevs.getAllValues(function(aRes) {
+        server.getAllValues(function(aRes) {
             for (var j in aRes) {
                 devs[j].value = aRes[j];
             }
@@ -62,11 +62,11 @@ function devTest() {
     
     form.btnSetValue.onActionPerformed = function(event) {
         var curDevId = form.mgDevs.selected[0].id;
-        servDevs.setDevValue(curDevId, form.newVal.value);
+        server.setDevValue(curDevId, form.newVal.value);
     };
     
     form.btnClearAll.onActionPerformed = function(event) {
-        servDevs.clearAll(function() {
+        server.clearAll(function() {
             devs = [];
             form.mgDevs.data = null;
             form.mgDevs.data = devs;

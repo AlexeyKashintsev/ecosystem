@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?><layout title="" view="view">
+  <AnchorsPane background="#ffffff" cursor="0" name="view" prefHeight="360px" prefWidth="400px"/>
+  <ModelGrid cursor="0" data="qActions" name="modelGrid" parent="view" prefHeight="260px" prefWidth="400px">
+    <AnchorsPaneConstraints height="260px" left="0px" top="40px" width="400px"/>
+    <ModelGridColumn field="action_name" name="colAction_name" title="colAction_name" width="95px">
+      <ModelFormattedField/>
+    </ModelGridColumn>
+    <ModelGridColumn field="dev" name="colDev" title="colDev" width="95px">
+      <ModelSpin max="1.7976931348623157E308" min="-1.7976931348623157E308"/>
+    </ModelGridColumn>
+    <ModelGridColumn field="action_code" name="colAction_code" title="colAction_code" width="96px">
+      <ModelFormattedField/>
+    </ModelGridColumn>
+    <ModelGridColumn field="action_value" name="colAction_value" title="colAction_value" width="95px">
+      <ModelFormattedField/>
+    </ModelGridColumn>
+  </ModelGrid>
+  <Button cursor="0" name="btnAddAction" parent="view" prefHeight="20px" prefWidth="70px" text="ADD">
+    <AnchorsPaneConstraints height="20px" left="10px" top="10px" width="70px"/>
+  </Button>
+  <Button cursor="0" name="btn2Edison" parent="view" prefHeight="20px" prefWidth="70px" text="EDISON">
+    <AnchorsPaneConstraints height="20px" right="10px" top="10px" width="70px"/>
+  </Button>
+  <Button cursor="0" name="btnSave" parent="view" prefHeight="20px" prefWidth="70px" text="Save">
+    <AnchorsPaneConstraints bottom="10px" height="20px" left="240px" width="70px"/>
+  </Button>
+  <Button cursor="0" name="btnCancel" parent="view" prefHeight="20px" prefWidth="70px" text="req">
+    <AnchorsPaneConstraints bottom="10px" height="20px" right="10px" width="70px"/>
+  </Button>
+</layout>

@@ -3,7 +3,7 @@
  * @author Alexey
  * {global P}
  */
-function Timers() {
+function Actions() {
     var self = this
             , model = P.loadModel(this.constructor.name)
             , form = P.loadForm(this.constructor.name, model);
@@ -12,15 +12,19 @@ function Timers() {
         form.show();
     };
     
-    form.addAction.onActionPerformed = function(event) {
-        if (form.mgActions.selected !== [])
-        model.qActCons.push({timer: form.mgActions.selected[0].act_timer_id});
+    // TODO : place your code here
+    
+    model.requery(function () {
+        // TODO : place your code here
+    });
+    
+    form.btnAddAction.onActionPerformed = function(event) {
+        model.qActions.push({});
     };
+    form.btnDelAction.onActionPerformed = function(event) {
 
-    form.btnAddTimer.onActionPerformed = function(event) {
-        model.qTimers.push({});
     };
-    form.button.onActionPerformed = function(event) {
+    form.btnSave.onActionPerformed = function(event) {
         model.save();
     };
     form.btnCancel.onActionPerformed = function(event) {
