@@ -14,7 +14,8 @@ function DevsT() {
     var devTypes = {
         dIn:    {dir: 'in', type: 'd'},
         dOut:   {dir: 'out', type: 'd'},
-        aIn:    {type: 'a'}
+        aIn:    {type: 'a'},
+        aTm:    {type: 'a', out_filter: 'temperature'}
     };
     
     self.addDev = function(devData, init) {
@@ -24,12 +25,16 @@ function DevsT() {
             switch (d.type) {
                 case 'd': {
 //                        devs.push();
-                    devs.push(new int.GPIO(devData.port, d.dir, init));
+                    var dev = new int.GPIO(devData.port, d.dir, init);
+                    dev.type = d;
+                    devs.push(dev);
                     break;
                 }
                 case 'a': {
 //                        devs.push();
-                    devs.push(new int.AIO(devData.port));
+                    var dev = new int.AIO(devData.port);
+                    dev.type = d;
+                    devs.push(dev);
                     break;
                 }
             }
@@ -37,6 +42,7 @@ function DevsT() {
         } else
             return null;
     };
+    
     
     self.devGetValue = function(devId) {
         return devs[devId].value;
@@ -49,7 +55,16 @@ function DevsT() {
     self.getAllValues = function() {
         var res = [];
         for (var j in devs)
-            res[j] = devs[j].value;
+            switch (devs[j].type.out_filter) {
+                case 'temperature': {
+                        var a = devs[j].value;
+                        var B = 3975;
+                        var rs = (1023-a)*10000/a;
+                        res[j] = 1/(Math.log(rs/10000)/B+1/298.15)-273.15;
+                        break;
+                    };
+                default: res[j] = devs[j].value;
+            }
         return res;
     };
     

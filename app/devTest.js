@@ -20,7 +20,8 @@ function devTest() {
     var devTypes = [
         {typeId: 'dIn', typeName: 'Цифровой вход'},
         {typeId: 'dOut', typeName: 'Цифровой выход'},
-        {typeId: 'aIn', typeName: 'Аналоговый вход'}
+        {typeId: 'aIn', typeName: 'Аналоговый вход'},
+        {typeId: 'aTm', typeName: 'Датчик температуры'}
     ];
     form.mcDevTSelect.displayList = devTypes;
     form.mcDevTSelect.displayField = 'typeName';
