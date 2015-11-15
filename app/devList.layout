@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><layout title="" view="view">
   <AnchorsPane background="#ffffff" cursor="0" name="view" prefHeight="300px" prefWidth="400px"/>
-  <ModelGrid cursor="0" name="modelGrid" parent="view" prefHeight="300px" prefWidth="160px">
-    <AnchorsPaneConstraints height="300px" left="0px" top="0px" width="160px"/>
+  <ModelGrid cursor="0" name="modelGrid" parent="view" prefHeight="230px" prefWidth="400px">
+    <AnchorsPaneConstraints height="230px" left="0px" top="0px" width="400px"/>
   </ModelGrid>
 </layout>
