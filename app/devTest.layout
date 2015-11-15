@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?><layout title="" view="view">
+  <AnchorsPane background="#ffffff" cursor="0" name="view" prefHeight="300px" prefWidth="689px"/>
+  <ModelGrid cursor="0" name="mgDevs" parent="view" prefHeight="200px" prefWidth="689px">
+    <AnchorsPaneConstraints height="200px" left="0px" right="0px" top="0px"/>
+    <ModelGridColumn name="colDevId" title="column" width="137px">
+      <ModelFormattedField/>
+    </ModelGridColumn>
+    <ModelGridColumn name="colDevName" title="column" width="137px">
+      <ModelFormattedField/>
+    </ModelGridColumn>
+    <ModelGridColumn name="colDevType" title="column" width="137px">
+      <ModelFormattedField/>
+    </ModelGridColumn>
+    <ModelGridColumn name="colDevPort" title="column" width="137px">
+      <ModelFormattedField/>
+    </ModelGridColumn>
+    <ModelGridColumn name="colValue" title="column" width="137px">
+      <ModelFormattedField/>
+    </ModelGridColumn>
+  </ModelGrid>
+  <ModelCombo cursor="0" name="mcDevTSelect" parent="view" prefHeight="26px" prefWidth="190px">
+    <AnchorsPaneConstraints bottom="64px" height="26px" left="50px" width="190px"/>
+  </ModelCombo>
+  <Label cursor="0" name="label" parent="view" prefHeight="20px" prefWidth="40px" text="Тип">
+    <AnchorsPaneConstraints bottom="67px" height="20px" left="10px" width="40px"/>
+  </Label>
+  <Label cursor="0" name="label1" parent="view" prefHeight="20px" prefWidth="40px" text="Порт">
+    <AnchorsPaneConstraints bottom="67px" height="20px" left="250px" width="40px"/>
+  </Label>
+  <TextField cursor="0" name="tfPort" parent="view" prefHeight="26px" prefWidth="80px">
+    <AnchorsPaneConstraints bottom="64px" height="26px" left="290px" width="80px"/>
+  </TextField>
+  <Button cursor="0" name="button" parent="view" prefHeight="20px" prefWidth="110px" text="Добавить">
+    <AnchorsPaneConstraints bottom="67px" height="20px" right="49px" width="110px"/>
+  </Button>
+  <ModelCheckBox cursor="0" name="defVal" parent="view" prefHeight="26px" prefWidth="151px" text="Значение">
+    <AnchorsPaneConstraints bottom="64px" height="26px" left="370px" width="151px"/>
+  </ModelCheckBox>
+</layout>
