@@ -3,7 +3,7 @@
 /**
  * 
  * @author Alexey
- * @stateless
+ * @statefull
  * @public 
  * @constructor
  */
