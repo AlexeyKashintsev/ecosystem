@@ -15,7 +15,7 @@ function Interfaces() {
     
     var AIO = Java.type('mraa.Aio');
     
-    var I2C = Java.type('mraa.J2c');
+    var I2C = Java.type('mraa.I2c');
     
     function error(errorType) {
         throw { 
