@@ -14,7 +14,7 @@ function devTest() {
         form.show();
     };
     
-    var devsServ = new P.ServerModule('DevsT');
+    var devsServ = new P.ServerModule('WholeServer');
 //    var cloudManager = new P.ServerModule('Clou__dManager');
     
     var devTypes = [
@@ -32,7 +32,6 @@ function devTest() {
     form.mgDevs.colDevName.field = "name";
     form.mgDevs.colValue.field = "value";    
     form.mgDevs.colDevPort.field = "port";    
-    
     
     function addDev2Grid(aDevId, aDevPar) {
         aDevPar.id = aDevId;

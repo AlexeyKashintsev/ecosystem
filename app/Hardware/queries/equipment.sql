@@ -1,5 +1,0 @@
-/**
- * 
- * @author Alexey
- * @name equipment
- */

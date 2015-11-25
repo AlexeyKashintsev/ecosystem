@@ -1,5 +1,14 @@
-<?xml version="1.0" encoding="UTF-8"?><Context path="/smart_eco">
-  <Realm className="org.apache.catalina.realm.DataSourceRealm" dataSourceName="sm_serv_dev" digest="MD5" localDataSource="true" roleNameCol="GROUP_NAME" userCredCol="USR_PASSWD" userNameCol="USR_NAME" userRoleTable="MTD_GROUPS" userTable="MTD_USERS"/>
-  <Resource driverClassName="org.postgresql.Driver" name="seco" password="remdev" schema="public" type="javax.sql.DataSource" url="jdbc:postgresql://localhost:5432/smartecosystem" username="remdev"/>
-  <Resource driverClassName="org.postgresql.Driver" name="sm_serv_dev" password="Rem000Dev" schema="public" type="javax.sql.DataSource" url="jdbc:postgresql://party-ples.ru:5432/smartecosystem" username="remotedev"/>
+<?xml version="1.0" encoding="UTF-8"?><Context path="/eco">
+  <Realm className="org.apache.catalina.realm.DataSourceRealm" dataSourceName="ecosystem" digest="MD5" localDataSource="true" roleNameCol="GROUP_NAME" userCredCol="USR_PASSWD" userNameCol="USR_NAME" userRoleTable="MTD_GROUPS" userTable="MTD_USERS"/>
+  <Resource driverClassName="org.h2.Driver" name="H2_PET_HOTEL" password="test" schema="PUBLIC" type="javax.sql.DataSource" url="jdbc:h2:tcp://localhost/c:\Users\Алексей\Documents\NetBeansProjects\platypusuidemo\pet_hotel" username="test"/>
+  <Resource driverClassName="oracle.jdbc.OracleDriver" name="test_db" password="eas" schema="EAS" type="javax.sql.DataSource" url="jdbc:oracle:thin:@asvr:1521:adb" username="eas"/>
+  <Resource driverClassName="oracle.jdbc.OracleDriver" name="easHR" password="hr" schema="HR" type="javax.sql.DataSource" url="jdbc:oracle:thin:@asvr:1521:adb" username="hr"/>
+  <Resource driverClassName="org.postgresql.Driver" name="clinic" password="Rem000Dev" schema="information_schema" type="javax.sql.DataSource" url="jdbc:postgresql://party-ples.ru:5432/clinic" username="remotedev"/>
+  <Resource driverClassName="org.postgresql.Driver" name="clinic_dev_home" password="Rem000Dev" schema="public" type="javax.sql.DataSource" url="jdbc:postgresql://party-ples.ru:5432/clinic_dev" username="remotedev"/>
+  <Resource driverClassName="org.postgresql.Driver" name="TSG_MERGE" password="tsgpswd" schema="tsg_main" type="javax.sql.DataSource" url="jdbc:postgresql://party-ples.ru:5432/TSG_MERGE" username="tsg_main"/>
+  <Resource driverClassName="org.postgresql.Driver" name="operinfo_cache" password="Rem000Dev" schema="public" type="javax.sql.DataSource" url="jdbc:postgresql://party-ples.ru:5432/operinfo" username="remotedev"/>
+  <Resource driverClassName="org.postgresql.Driver" name="tsg_home" password="Rem000Dev" schema="tsg_main" type="javax.sql.DataSource" url="jdbc:postgresql://party-ples.ru:5432/TSG" username="remotedev"/>
+  <Resource driverClassName="org.postgresql.Driver" name="cafeErpDeveloper" password="Rem000Dev" schema="cafeErp" type="javax.sql.DataSource" url="jdbc:postgresql://192.168.10.156:5432/cafeErpDeveloper" username="remotedev"/>
+  <Resource driverClassName="org.postgresql.Driver" name="Lounge" password="Rem000Dev" schema="public" type="javax.sql.DataSource" url="jdbc:postgresql://party-ples.ru:5432/lounge" username="remotedev"/>
+  <Resource driverClassName="org.postgresql.Driver" name="ecosystem" password="Rem000Dev" schema="public" type="javax.sql.DataSource" url="jdbc:postgresql://party-ples.ru:5432/smartecosystem" username="remotedev"/>
 </Context>

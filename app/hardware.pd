@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><datamodel datasource="null">
-  <fieldsEntity entityHeight="200" entityIconified="false" entityId="144754554912902" entityLocationX="399" entityLocationY="40" entityWidth="150" tableName="equipment"/>
-  <fieldsEntity entityHeight="200" entityIconified="false" entityId="144754506763834" entityLocationX="205" entityLocationY="31" entityWidth="150" tableName="eco_equipment"/>
-  <fieldsEntity entityHeight="200" entityIconified="false" entityId="144749208341375" entityLocationX="599" entityLocationY="41" entityWidth="150" tableName="ec_type"/>
-  <fieldsEntity entityHeight="200" entityIconified="false" entityId="144749191454888" entityLocationX="26" entityLocationY="44" entityWidth="150" tableName="eco_zone"/>
+  <fieldsEntity entityHeight="200" entityIconified="false" entityId="144846269792235" entityLocationX="700" entityLocationY="22" entityWidth="150" tableName="eco_dev_types"/>
+  <fieldsEntity entityHeight="200" entityIconified="false" entityId="144846267034476" entityLocationX="530" entityLocationY="22" entityWidth="150" tableName="eco_devices"/>
+  <fieldsEntity entityHeight="200" entityIconified="false" entityId="144749191454888" entityLocationX="38" entityLocationY="222" entityWidth="150" tableName="eco_zone"/>
 </datamodel>

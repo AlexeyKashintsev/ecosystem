@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><datamodel>
+  <entity Name="qTypes" Title="" entityHeight="200" entityIconified="false" entityId="144846351415679" entityLocationX="363" entityLocationY="35" entityWidth="150" queryId="qTypes" tableName="" tableSchemaName=""/>
+  <entity Name="qDevices" Title="" entityHeight="200" entityIconified="false" entityId="144846351258655" entityLocationX="169" entityLocationY="32" entityWidth="150" queryId="qDevices" tableName="" tableSchemaName=""/>
+  <referenceRelation collectionPropertyName="type_devs" leftEntityFieldName="dev_type" leftEntityId="144846351258655" rightEntityFieldName="eco_dev_types_id" rightEntityId="144846351415679" scalarPropertyName="dev_types"/>
+</datamodel>
