@@ -9,7 +9,7 @@ define(['Interfaces'], function (Interfaces, ModuleName) {
     return function (devData) {
         var self = this;
         
-        var interface = new Interfaces.GPIO(devData.port, 'out', devData.init)
+        var interface = new Interfaces.GPIO(devData.port, 'out', devData.init);
         
         self.getValue = function() {
             return interface.value;

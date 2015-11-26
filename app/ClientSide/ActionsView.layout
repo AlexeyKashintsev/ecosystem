@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?><layout title="" view="view">
+  <AnchorsPane background="#ffffff" cursor="0" name="view" prefHeight="453px" prefWidth="487px"/>
+  <ModelGrid cursor="0" data="qActions" name="mgActions" parent="view" prefHeight="240px" prefWidth="487px" rowsHeight="20">
+    <AnchorsPaneConstraints bottom="182px" left="0px" right="0px" top="31px"/>
+    <ModelGridColumn field="act_device" name="colDevName" title="Устройство" width="157px">
+      <ModelCombo displayField="name" displayList="qDevices"/>
+    </ModelGridColumn>
+    <ModelGridColumn field="act_def" name="colActType" title="Тип" width="157px">
+      <ModelCombo displayField="act_name" displayList="qActionsByType"/>
+    </ModelGridColumn>
+    <ModelGridColumn field="action_name" name="clActName" title="Действие" width="157px">
+      <ModelFormattedField/>
+    </ModelGridColumn>
+  </ModelGrid>
+  <ToolBar cursor="0" name="toolBar" parent="view" prefHeight="30px" prefWidth="487px">
+    <AnchorsPaneConstraints height="30px" left="0px" right="0px" top="0px"/>
+  </ToolBar>
+  <Button cursor="0" focusable="false" horizontalTextPosition="0" name="btnAdd" parent="toolBar" prefHeight="30px" prefWidth="70px" text="Добавить" verticalTextPosition="3"/>
+  <Button cursor="0" focusable="false" horizontalTextPosition="0" name="btnDel" parent="toolBar" prefHeight="30px" prefWidth="70px" text="Удалить" verticalTextPosition="3"/>
+  <Button cursor="0" focusable="false" horizontalTextPosition="0" name="btnRequery" parent="toolBar" prefHeight="30px" prefWidth="70px" text="Сбросить" verticalTextPosition="3"/>
+  <Label cursor="0" name="lblSettings" parent="view" prefHeight="20px" prefWidth="70px" text="Настройки:">
+    <AnchorsPaneConstraints bottom="156px" height="20px" left="10px" width="70px"/>
+  </Label>
+  <ScrollPane cursor="0" horizontalScrollBarPolicy="31" name="scrollPane" parent="view" prefHeight="100px" prefWidth="470px">
+    <AnchorsPaneConstraints bottom="49px" height="100px" left="10px" right="7px"/>
+  </ScrollPane>
+  <BoxPane background="#ffffff" cursor="0" name="pnlSettings" orientation="1" parent="scrollPane" prefHeight="98px" prefWidth="468px"/>
+  <Button cursor="0" name="btnSave" parent="view" prefHeight="30px" prefWidth="100px" text="Сохранить">
+    <AnchorsPaneConstraints bottom="9px" height="30px" right="110px" width="100px"/>
+  </Button>
+  <Button cursor="0" name="btnCancel" parent="view" prefHeight="30px" prefWidth="90px" text="Отмена">
+    <AnchorsPaneConstraints bottom="9px" height="30px" right="10px" width="90px"/>
+  </Button>
+</layout>

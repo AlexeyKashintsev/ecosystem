@@ -1,8 +1,8 @@
 /**
  *
- * @author Alexey
+ * @author Алексей
  * @name qActions
  * @public
  */ 
 Select * 
-From an_actions t1
+From eco_actions t1

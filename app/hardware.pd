@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><datamodel datasource="null">
-  <fieldsEntity entityHeight="200" entityIconified="false" entityId="144846269792235" entityLocationX="700" entityLocationY="22" entityWidth="150" tableName="eco_dev_types"/>
-  <fieldsEntity entityHeight="200" entityIconified="false" entityId="144852041502881" entityLocationX="873" entityLocationY="20" entityWidth="150" tableName="eco_dev_actions"/>
-  <fieldsEntity entityHeight="200" entityIconified="false" entityId="144846267034476" entityLocationX="530" entityLocationY="22" entityWidth="150" tableName="eco_devices"/>
+  <fieldsEntity entityHeight="200" entityIconified="false" entityId="144846269792235" entityLocationX="711" entityLocationY="314" entityWidth="150" tableName="eco_dev_types"/>
+  <fieldsEntity entityHeight="200" entityIconified="false" entityId="144852041502881" entityLocationX="910" entityLocationY="90" entityWidth="150" tableName="eco_dev_actions"/>
+  <fieldsEntity entityHeight="200" entityIconified="false" entityId="144852254855172" entityLocationX="707" entityLocationY="56" entityWidth="150" tableName="eco_actions"/>
+  <fieldsEntity entityHeight="200" entityIconified="false" entityId="144846267034476" entityLocationX="502" entityLocationY="297" entityWidth="150" tableName="eco_devices"/>
   <fieldsEntity entityHeight="200" entityIconified="false" entityId="144749191454888" entityLocationX="38" entityLocationY="222" entityWidth="150" tableName="eco_zone"/>
 </datamodel>

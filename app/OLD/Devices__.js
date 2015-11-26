@@ -6,7 +6,7 @@
  * @public 
  * @constructor
  * @statefull
- * @module Devices
+ * @module Devices___
  */
 define(['Interfaces'], function (Interfaces, ModuleName) {
     return function() {
