@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><layout title="" view="view">
-  <AnchorsPane background="#ffffff" cursor="0" name="view" prefHeight="422px" prefWidth="487px"/>
-  <ModelGrid cursor="0" data="qDevices" name="mgDevices" parent="view" prefHeight="209px" prefWidth="487px">
+  <AnchorsPane background="#ffffff" cursor="0" name="view" prefHeight="453px" prefWidth="487px"/>
+  <ModelGrid cursor="0" data="qDevices" name="mgDevices" parent="view" prefHeight="240px" prefWidth="487px" rowsHeight="20">
     <AnchorsPaneConstraints bottom="182px" left="0px" right="0px" top="31px"/>
     <ModelGridColumn field="dev_types" name="colDevType" title="Тип" width="236px">
       <ModelCombo displayField="type_name" displayList="qTypes"/>
@@ -21,7 +21,7 @@
   <ScrollPane cursor="0" horizontalScrollBarPolicy="31" name="scrollPane" parent="view" prefHeight="100px" prefWidth="470px">
     <AnchorsPaneConstraints bottom="49px" height="100px" left="10px" right="7px"/>
   </ScrollPane>
-  <GridPane background="#ffffff" columns="2" cursor="0" name="pnlSettings" parent="scrollPane" prefHeight="98px" prefWidth="468px" rows="5"/>
+  <BoxPane background="#ffffff" cursor="0" name="pnlSettings" orientation="1" parent="scrollPane" prefHeight="98px" prefWidth="468px"/>
   <Button cursor="0" name="btnSave" parent="view" prefHeight="30px" prefWidth="100px" text="Сохранить">
     <AnchorsPaneConstraints bottom="9px" height="30px" right="110px" width="100px"/>
   </Button>

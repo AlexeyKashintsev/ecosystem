@@ -18,11 +18,12 @@ function DevicesView() {
     
     var settings = {}, set_count = 0, setData = {}, data;
     function clearSettings() {
-        for (var j in settings) {
-            form.pnlSettings.remove(settings[j].label);
-            form.pnlSettings.remove(settings[j].control);
-            delete settings[j];
-        }
+//        for (var j in settings) {
+////            form.pnlSettings.remove(settings[j].label);
+////            form.pnlSettings.remove(settings[j].control);
+//            delete settings[j];
+//        }
+        form.pnlSettings.clear();
         settings = {};
         set_count = 0;
         setData = {};
@@ -35,6 +36,7 @@ function DevicesView() {
             settings[j] = {};
             settings[j].label =  new P.Label();
             settings[j].label.text = setConf[j].description;
+            settings[j].label.height = 25;
             if (!setData[j])
                 setData[j] = null;
             
@@ -42,18 +44,22 @@ function DevicesView() {
                 case 'integer': {
                     settings[j].control = new P.ModelSpin();
                     settings[j].control.value = setData[j];
-                    settings[j].control.height = '40px';
+                    settings[j].control.height = 30;
                     break;
                 }
                 case 'boolean': {
                     settings[j].control = new P.ModelCheckBox();
                     settings[j].control.value = setData[j];
+                    settings[j].control.height = 30;
                     break;
                 }
             }
             
-            form.pnlSettings.add(settings[j].label, set_count, 0);
-            form.pnlSettings.add(settings[j].control, set_count, 1);
+            var pnl = new P.AnchorsPane();
+            pnl.height = 30;
+            pnl.add(settings[j].label, new P.Anchors(0, null, 150, 0, 25, 0));
+            pnl.add(settings[j].control, new P.Anchors(150, null, 0, 0, 30, 0));
+            form.pnlSettings.add(pnl);
             set_count++;
         }
     }

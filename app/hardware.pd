@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><datamodel datasource="null">
   <fieldsEntity entityHeight="200" entityIconified="false" entityId="144846269792235" entityLocationX="700" entityLocationY="22" entityWidth="150" tableName="eco_dev_types"/>
+  <fieldsEntity entityHeight="200" entityIconified="false" entityId="144852041502881" entityLocationX="873" entityLocationY="20" entityWidth="150" tableName="eco_dev_actions"/>
   <fieldsEntity entityHeight="200" entityIconified="false" entityId="144846267034476" entityLocationX="530" entityLocationY="22" entityWidth="150" tableName="eco_devices"/>
   <fieldsEntity entityHeight="200" entityIconified="false" entityId="144749191454888" entityLocationX="38" entityLocationY="222" entityWidth="150" tableName="eco_zone"/>
 </datamodel>
