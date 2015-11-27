@@ -2,10 +2,8 @@
  * 
  * @author Алексей
  * @stateless
- * @public 
- * @module TemperatureSensor
  */
-define(['Interfaces'], function (Interfaces, ModuleName) {
+define(['Hardware/Interfaces'], function (Interfaces, ModuleName) {
     return function (devData) {
         var self = this;
         

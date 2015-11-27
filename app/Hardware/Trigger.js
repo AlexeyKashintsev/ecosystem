@@ -2,13 +2,10 @@
  * 
  * @author Алексей
  * @stateless
- * @public 
- * @module Trigger
  */
-define(['Interfaces'], function (Interfaces, ModuleName) {
+define(['Hardware/Interfaces'], function (Interfaces, Orm, ModuleName) {
     return function (devData) {
         var self = this;
-        
         var interface = new Interfaces.GPIO(devData.port, 'out', devData.init);
         
         self.getValue = function() {

@@ -3,7 +3,7 @@
  * @author Alexey
  * @module Interfaces
  */
-define(function (ModuleName) {
+define(['orm'], function (ModuleName) {
     var mraa = Java.type('mraa.mraa');
     var GPIO = Java.type('mraa.Gpio');
     var DIR = Java.type('mraa.Dir');
