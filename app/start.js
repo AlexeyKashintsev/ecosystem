@@ -6,7 +6,7 @@ require(['facade'], function (F) {
     var global = this;
     F.cacheBust(true);
     F.export(global);
-    require('ActionsView', 'DevicesView', function(ActionsView, DevicesView){
+    require(['ActionsView', 'DevicesView'], function(ActionsView){
         var m = new ActionsView();
         m.show();
         var n = new DevicesView();
