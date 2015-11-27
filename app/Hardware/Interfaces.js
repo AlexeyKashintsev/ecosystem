@@ -5,14 +5,13 @@
  */
 define(function (ModuleName) {
     var mraa = Java.type('mraa.mraa');
-    var GPIO = Java.type('mraa.Gpio');
+    var Gpio = Java.type('mraa.Gpio');
     var DIR = Java.type('mraa.Dir');
-
-    var AIO = Java.type('mraa.Aio');
-
+    var Aio = Java.type('mraa.Aio');
     var I2C = Java.type('mraa.I2c');
     
-    return function() {
+    return new function() {
+        Logger.info('Interface module initialized');
         function error(errorType) {
             throw { 
                 name:        errorType, 
@@ -29,7 +28,7 @@ define(function (ModuleName) {
 
         this.GPIO = function(port, dir, init) {
             var state = !!init;
-            var gpio = new GPIO(port);
+            var gpio = new Gpio(port);
             gpio.dir(dir == 'out' ? DIR.DIR_OUT : DIR.DIR_IN);
             if (dir == 'out')
                 gpio.write(state);
@@ -50,7 +49,7 @@ define(function (ModuleName) {
         };
 
         this.AIO = function(port) {
-            var aio = new AIO(port);
+            var aio = new Aio(port);
 
             this.getInt = function() {
                 return aio.read();
@@ -77,5 +76,5 @@ define(function (ModuleName) {
                 get: this.getInt
             });
         };
-    };
+    }();
 });
