@@ -99,7 +99,7 @@ function ActionsView() {
     };
     form.btnDoAction.onActionPerformed = function(event) {
         if (!model.modified) {
-            servDev.devPerformAction(form.mgActions.selected[0].eco_actions_id, function(res) {
+            servDev.devPerformAction(form.mgActions.selected[0].action_id, function(res) {
                 alert(res);
             });
         } else {

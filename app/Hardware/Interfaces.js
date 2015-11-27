@@ -3,15 +3,15 @@
  * @author Alexey
  * @module Interfaces
  */
-define(['orm'], function (ModuleName) {
-    var mraa = Java.type('mraa.mraa');
-    var GPIO = Java.type('mraa.Gpio');
-    var DIR = Java.type('mraa.Dir');
-
-    var AIO = Java.type('mraa.Aio');
-
-    var I2C = Java.type('mraa.I2c');
-    
+define(function (ModuleName) {
+//    var mraa = Java.type('mraa.mraa');
+//    var GPIO = Java.type('mraa.Gpio');
+//    var DIR = Java.type('mraa.Dir');
+//
+//    var AIO = Java.type('mraa.Aio');
+//
+//    var I2C = Java.type('mraa.I2c');
+//    
     return function() {
         function error(errorType) {
             throw { 
