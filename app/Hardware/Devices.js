@@ -14,12 +14,16 @@ define(['orm', 'logger', 'Hardware/Trigger', 'Hardware/TemperatureSensor'], func
         Logger.info('Module devices started...');
         
         function addDev(aDevId, aDevType, aDevData) {
-            Logger.info('Adding device. Dev_id: ' + aDevId + ', DevData: '+ JSON.stringify(aDevData));
-            switch (aDevType) {
-                case 'Trigger': devs[aDevId] = new Trigger(aDevData);
-                    break;
-                case 'TemperatureSensor': devs[aDevId] = new TemperatureSensor(aDevData);
-                    break;
+            try {
+                Logger.info('Adding device. Dev_id: ' + aDevId + ', DevData: '+ JSON.stringify(aDevData));
+                switch (aDevType) {
+                    case 'Trigger': devs[aDevId] = new Trigger(aDevData);
+                        break;
+                    case 'TemperatureSensor': devs[aDevId] = new TemperatureSensor(aDevData);
+                        break;
+                }
+            } catch (e) {
+                Logger.info('Error: ' + e);
             }
         }
         
