@@ -1,4 +1,4 @@
 .DS_Store
-web
-/WEB-INF/lib
+!web
+!/WEB-INF/lib
 !/WEB-INF/web.xml
