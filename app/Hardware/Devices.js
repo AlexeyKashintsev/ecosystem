@@ -39,12 +39,13 @@ define(['orm', 'logger', 'Hardware/Trigger', 'Hardware/TemperatureSensor'], func
 
         self.devPerformAction = function(anActionId) {
             Logger.info('Performing action: ' + anActionId);
-            var action = model.qActions.find(function(elem) {
-                return elem.eco_actions_id === anActionId;
+            var action;
+            model.qActions.forEach(function(elem) {
+                if (elem.eco_actions_id == anActionId)
+                    action = elem;
             });
             if (action) {
                 Logger.info('Action found: ' + JSON.stringify(action));
-                action = action[0];
                 var act = action.actionType;
                 if (devs[action.device_id]) {
                     if (devs[action.device_id][act.act_command]) {

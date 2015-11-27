@@ -7,9 +7,11 @@ define(['Hardware/Interfaces', 'logger'], function (Interfaces, Logger, ModuleNa
     return function (devData) {
         var self = this;
         
-        Logger.info('Calling for interface...');
-        var interface = new Interfaces.AIO(devData.port);
-        Logger.info('Calling for interface... Done');
+        try {
+            var interface = new Interfaces.AIO(devData.port);
+        } catch (e) {
+            Logger.info('Error initializing interface: ' + e);
+        }
         
         self.getRawValue = function() {
             return interface.value;

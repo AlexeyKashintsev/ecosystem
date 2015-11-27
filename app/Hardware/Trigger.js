@@ -6,9 +6,12 @@
 define(['Hardware/Interfaces', 'logger'], function (Interfaces, Logger, ModuleName) {
     return function (devData) {
         var self = this;
-        Logger.info('Calling for interface...');
-        var interface = new Interfaces.GPIO(devData.port, 'out', devData.init);
-        Logger.info('Calling for interface... Done');
+        
+        try {
+            var interface = new Interfaces.GPIO(devData.port, 'out', devData.init);
+        } catch (e) {
+            Logger.info('Error initializing interface: ' + e);
+        }
         
         self.getValue = function() {
             return interface.value;
