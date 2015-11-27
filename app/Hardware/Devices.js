@@ -5,7 +5,7 @@
  * @public 
  * @module Devices
  */
-define(['orm', 'rpc', 'logger', 'Hardware/Trigger', 'Hardware/TemperatureSensor'], function (Orm
+define(['orm', 'logger', 'Hardware/Trigger', 'Hardware/TemperatureSensor'], function (Orm
 , Logger, Trigger, TemperatureSensor, ModuleName) {
     return function () {
         var self = this, model = Orm.loadModel(ModuleName);
