@@ -3,7 +3,7 @@
  * @author Alexey
  * @module Interfaces
  */
-define(function (ModuleName) {
+define(['logger'], function (Logger, ModuleName) {
     var mraa = Java.type('mraa.mraa');
     var Gpio = Java.type('mraa.Gpio');
     var DIR = Java.type('mraa.Dir');
