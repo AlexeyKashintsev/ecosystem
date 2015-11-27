@@ -95,7 +95,9 @@ function DevicesView() {
     };
 
     form.btnSave.onActionPerformed = function(event) {
-        model.save(servDev.devLoadConfFromDatabase);
+        model.save(function() {
+            servDev.devLoadConfFromDatabase(function() {});
+        });
     };
     form.btnCancel.onActionPerformed = function(event) {
         form.close();
