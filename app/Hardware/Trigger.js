@@ -3,7 +3,7 @@
  * @author Алексей
  * @stateless
  */
-define(['Hardware/Interfaces'], function (Interfaces, Orm, ModuleName) {
+define(['Hardware/Interfaces', 'logger'], function (Interfaces, Logger, ModuleName) {
     return function (devData) {
         var self = this;
         Logger.info('Calling for interface...');
