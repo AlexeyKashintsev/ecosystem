@@ -9,12 +9,13 @@
       <ModelCombo displayField="act_name" displayList="qActionsByType"/>
     </ModelGridColumn>
     <ModelGridColumn field="action_name" name="clActName" title="Действие" width="157px">
-      <ModelFormattedField/>
+      <ModelFormattedField format=""/>
     </ModelGridColumn>
   </ModelGrid>
   <ToolBar cursor="0" name="toolBar" parent="view" prefHeight="30px" prefWidth="487px">
     <AnchorsPaneConstraints height="30px" left="0px" right="0px" top="0px"/>
   </ToolBar>
+  <Button cursor="0" focusable="false" horizontalTextPosition="0" name="btnDoAction" parent="toolBar" prefHeight="30px" prefWidth="100px" text="Исполнить" verticalTextPosition="3"/>
   <Button cursor="0" focusable="false" horizontalTextPosition="0" name="btnAdd" parent="toolBar" prefHeight="30px" prefWidth="70px" text="Добавить" verticalTextPosition="3"/>
   <Button cursor="0" focusable="false" horizontalTextPosition="0" name="btnDel" parent="toolBar" prefHeight="30px" prefWidth="70px" text="Удалить" verticalTextPosition="3"/>
   <Button cursor="0" focusable="false" horizontalTextPosition="0" name="btnRequery" parent="toolBar" prefHeight="30px" prefWidth="70px" text="Сбросить" verticalTextPosition="3"/>

@@ -1,3 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><datamodel>
+  <entity Name="qActionsByType" Title="" entityHeight="200" entityIconified="false" entityId="144861044006475" entityLocationX="530" entityLocationY="28" entityWidth="150" queryId="qActionsByType" tableName="" tableSchemaName=""/>
+  <entity Name="qActions" Title="" entityHeight="200" entityIconified="false" entityId="144860970141990" entityLocationX="331" entityLocationY="26" entityWidth="150" queryId="qActions" tableName="" tableSchemaName=""/>
   <entity Name="qDevices" Title="" entityHeight="200" entityIconified="false" entityId="144854642490033" entityLocationX="122" entityLocationY="21" entityWidth="150" queryId="qDevices" tableName="" tableSchemaName=""/>
+  <referenceRelation leftEntityFieldName="device_id" leftEntityId="144860970141990" rightEntityFieldName="eco_devices_id" rightEntityId="144854642490033"/>
+  <referenceRelation collectionPropertyName="typeActions" leftEntityFieldName="action_id" leftEntityId="144860970141990" rightEntityFieldName="eco_dev_actions_id" rightEntityId="144861044006475" scalarPropertyName="actionType"/>
 </datamodel>

@@ -16,7 +16,7 @@ define(['Interfaces'], function (Interfaces, ModuleName) {
         };
 
         self.setValue = function(aValue) {
-            interface.value = aValue;
+            interface.value = typeof(aValue) === 'object' ? aValue.value : aValue;
         };
     };
 });

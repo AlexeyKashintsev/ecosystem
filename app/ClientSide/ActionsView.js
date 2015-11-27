@@ -9,7 +9,9 @@ function ActionsView() {
     var self = this
             , model = P.loadModel(this.constructor.name)
             , form = P.loadForm(this.constructor.name, model);
-
+    
+    var servDev = new P.ServerModule('Devices');
+    
     self.show = function () {
         form.show();
     };
@@ -90,9 +92,18 @@ function ActionsView() {
     };
 
     form.btnSave.onActionPerformed = function(event) {
-        model.save();
+        model.save(servDev.devLoadConfFromDatabase);
     };
     form.btnCancel.onActionPerformed = function(event) {
         form.close();
+    };
+    form.btnDoAction.onActionPerformed = function(event) {
+        if (!model.modified) {
+            servDev.devPerformAction(form.mgActions.selected[0].eco_actions_id, function(res) {
+                alert(res);
+            });
+        } else {
+            alert('Сохраните изменения!');
+        }
     };
 };

@@ -11,6 +11,10 @@ define(['Interfaces'], function (Interfaces, ModuleName) {
         
         var interface = new Interfaces.AIO(devData.port);
         
+        self.getRawValue = function() {
+            return interface.value;
+        };
+        
         self.getValue = function() {
             var a = interface.value;
             var B = 3975;

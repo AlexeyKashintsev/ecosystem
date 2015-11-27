@@ -9,7 +9,8 @@ function DevicesView() {
     var self = this
             , model = P.loadModel(this.constructor.name)
             , form = P.loadForm(this.constructor.name, model);
-
+    var servDev = new P.ServerModule('Devices');
+    
     self.show = function () {
         form.show();
     };
@@ -94,7 +95,7 @@ function DevicesView() {
     };
 
     form.btnSave.onActionPerformed = function(event) {
-        model.save();
+        model.save(servDev.devLoadConfFromDatabase);
     };
     form.btnCancel.onActionPerformed = function(event) {
         form.close();

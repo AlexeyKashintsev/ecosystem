@@ -6,9 +6,11 @@ require(['facade'], function (F) {
     var global = this;
     F.cacheBust(true);
     F.export(global);
-    require('ActionsView', function(ActionsView){
+    require('ActionsView', 'DevicesView', function(ActionsView, DevicesView){
         var m = new ActionsView();
         m.show();
+        var n = new DevicesView();
+        n.show();
     }, function(e){
         F.Logger.severe(e);
         if(global.document){
