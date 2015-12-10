@@ -22,7 +22,6 @@ define(['logger'], function (Logger, ModuleName) {
 
         return new function() {
             Logger.info('Interface module is initialized in normal');
-
             this.getMraa = function() {
                 return mraa;
             };
