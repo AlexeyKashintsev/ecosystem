@@ -2,3 +2,5 @@
 !web
 !/WEB-INF/lib
 !/WEB-INF/web.xml
+/app/start.js
+private.properties
