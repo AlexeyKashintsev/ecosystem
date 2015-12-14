@@ -3,7 +3,7 @@
  * @author Alexey
  * @module AIO
  */
-define(['orm', 'Hardware/interfaces/Interface'], function (Orm, Interface, ModuleName) {
+define(['orm', 'Interface'], function (Orm, Interface, ModuleName) {
     return function (port) {
         var self = this, model = Orm.loadModel(ModuleName);
         

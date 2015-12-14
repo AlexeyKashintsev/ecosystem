@@ -3,7 +3,7 @@
  * @author Алексей
  * @module Trigger
  */
-define(['Hardware/interfaces/GPIO', 'logger'], function (GPIO, Logger, ModuleName) {
+define(['GPIO', 'logger'], function (GPIO, Logger, ModuleName) {
     return function (devData) {
         var self = this;
         

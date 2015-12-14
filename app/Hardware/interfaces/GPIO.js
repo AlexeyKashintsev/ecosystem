@@ -3,7 +3,7 @@
  * @author Alexey
  * @module GPIO
  */
-define(['orm', 'Hardware/interfaces/Interface'], function (Orm, Interface, ModuleName) {
+define(['orm', 'Interface'], function (Orm, Interface, ModuleName) {
     return function (port, dir, init) {
         var self = this, model = Orm.loadModel(ModuleName);
         

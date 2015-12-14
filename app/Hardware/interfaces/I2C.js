@@ -3,7 +3,7 @@
  * @author Alexey
  * @module I2C
  */
-define(['orm', 'Hardware/interfaces/Interface'], function (Orm, Interface, ModuleName) {
+define(['orm', 'Interface'], function (Orm, Interface, ModuleName) {
     return function(port, anAdress) {
         var self = this, model = Orm.loadModel(ModuleName);
         var interface = new Interface();
