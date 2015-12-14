@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><layout title="" view="view">
+  <AnchorsPane background="#ffffff" cursor="0" name="view" prefHeight="300px" prefWidth="400px"/>
+  <TextField name="textField" parent="view" prefHeight="30px" prefWidth="170px" text="textField">
+    <AnchorsPaneConstraints height="30px" left="30px" top="50px" width="170px"/>
+  </TextField>
+  <TextField name="textField1" parent="view" prefHeight="30px" prefWidth="170px" text="textField1">
+    <AnchorsPaneConstraints height="30px" left="30px" top="100px" width="170px"/>
+  </TextField>
+  <Button cursor="0" name="bs1" parent="view" prefHeight="30px" prefWidth="80px" text="Set">
+    <AnchorsPaneConstraints height="30px" left="210px" top="50px" width="80px"/>
+  </Button>
+  <Button cursor="0" name="bg1" parent="view" prefHeight="30px" prefWidth="70px" text="Get">
+    <AnchorsPaneConstraints height="30px" left="300px" top="50px" width="70px"/>
+  </Button>
+  <Button cursor="0" name="bg2" parent="view" prefHeight="30px" prefWidth="70px" text="Get">
+    <AnchorsPaneConstraints height="30px" right="30px" top="100px" width="70px"/>
+  </Button>
+  <Button cursor="0" name="bs2" parent="view" prefHeight="30px" prefWidth="80px" text="Set">
+    <AnchorsPaneConstraints height="30px" left="210px" top="100px" width="80px"/>
+  </Button>
+</layout>

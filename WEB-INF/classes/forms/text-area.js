@@ -288,16 +288,6 @@ define(['boxing', 'common-utils/color', 'common-utils/cursor', 'common-utils/fon
             }
         });
 
-        Object.defineProperty(this, "onActionPerformed", {
-            get: function() {
-                var value = delegate.onActionPerformed;
-                return value;
-            },
-            set: function(aValue) {
-                delegate.onActionPerformed = aValue;
-            }
-        });
-
         Object.defineProperty(this, "onKeyReleased", {
             get: function() {
                 var value = delegate.onKeyReleased;
@@ -305,6 +295,16 @@ define(['boxing', 'common-utils/color', 'common-utils/cursor', 'common-utils/fon
             },
             set: function(aValue) {
                 delegate.onKeyReleased = aValue;
+            }
+        });
+
+        Object.defineProperty(this, "onActionPerformed", {
+            get: function() {
+                var value = delegate.onActionPerformed;
+                return value;
+            },
+            set: function(aValue) {
+                delegate.onActionPerformed = aValue;
             }
         });
 
@@ -435,7 +435,7 @@ define(['boxing', 'common-utils/color', 'common-utils/cursor', 'common-utils/fon
             }
         });
 
-    };
+    }
     /**
      * Tries to acquire focus for this component.
      * @method focus

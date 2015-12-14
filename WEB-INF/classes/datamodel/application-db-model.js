@@ -29,7 +29,7 @@ define(['boxing'], function(B) {
             }
         });
 
-    };
+    }
     /**
      * Creates new entity of model, based on passed sql query. This method works only in two tier components of a system.
      * @param sqlText SQL text for the new entity.
@@ -121,9 +121,9 @@ define(['boxing'], function(B) {
      * @method loadEntity
      * @memberOf ApplicationDbModel
      */
-    ApplicationDbModel.prototype.loadEntity = function(queryId) {
+    ApplicationDbModel.prototype.loadEntity = function(queryName) {
         var delegate = this.unwrap();
-        var value = delegate.loadEntity(B.boxAsJava(queryId));
+        var value = delegate.loadEntity(B.boxAsJava(queryName));
         return B.boxAsJs(value);
     };
 

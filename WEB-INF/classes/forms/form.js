@@ -267,7 +267,7 @@ define(['boxing'], function(B) {
             }
         });
 
-    };
+    }
     /**
      * Closes this form.
      * @param obj an object to be passed as a result of a selection into <code>showModal</code> callback handler function.
