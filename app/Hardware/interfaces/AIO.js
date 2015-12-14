@@ -3,9 +3,11 @@
  * @author Alexey
  * @module AIO
  */
-define(['orm', 'Interface'], function (Orm, Interface, ModuleName) {
+define(['logger', 'Interface'], function (Logger, Interface, ModuleName) {
     return function (port) {
-        var self = this, model = Orm.loadModel(ModuleName);
+        var self = this;
+        
+        Logger.info('Initializing module AIO on port: ' + port);
         
         var interface = new Interface();
         var aio = new interface.AIO(port);
@@ -21,5 +23,7 @@ define(['orm', 'Interface'], function (Orm, Interface, ModuleName) {
         Object.defineProperty(this, 'value', {
             get: this.getInt
         });
+        
+        Logger.info('Module AIO has successfully initialized on port: ' + port);
     };
 });

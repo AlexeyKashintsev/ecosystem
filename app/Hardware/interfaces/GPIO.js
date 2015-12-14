@@ -3,9 +3,9 @@
  * @author Alexey
  * @module GPIO
  */
-define(['orm', 'Interface'], function (Orm, Interface, ModuleName) {
+define(['logger', 'Interface'], function (Logger, Interface, ModuleName) {
     return function (port, dir, init) {
-        var self = this, model = Orm.loadModel(ModuleName);
+        var self = this;
         
         var interface = new Interface();
         
