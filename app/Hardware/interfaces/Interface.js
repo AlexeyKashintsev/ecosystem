@@ -7,7 +7,7 @@ define(['logger'], function (Logger, ModuleName) {
     try {
         var mraa = Java.type('mraa.mraa');
         var Gpio = Java.type('mraa.Gpio');
-        var DIR = Java.type('mraa.Dir');
+        var Dir = Java.type('mraa.Dir');
         var Aio = Java.type('mraa.Aio');
         var I2C = Java.type('mraa.I2c');
 
@@ -18,7 +18,7 @@ define(['logger'], function (Logger, ModuleName) {
             };
 
             this.GPIO = Gpio;
-            this.DIR = DIR;
+            this.DIR = Dir;
             this.AIO = Aio;
             this.I2C = I2C;            
         };

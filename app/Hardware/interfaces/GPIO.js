@@ -10,7 +10,7 @@ define(['orm', 'Interface'], function (Orm, Interface, ModuleName) {
         var interface = new Interface();
         
         var state = !!init;
-        var gpio = new interface.Gpio(port);
+        var gpio = new interface.GPIO(port);
         gpio.dir(dir == 'out' ? interface.DIR.DIR_OUT : interface.DIR.DIR_IN);
         if (dir == 'out')
             gpio.write(state);

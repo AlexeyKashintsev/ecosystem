@@ -8,7 +8,7 @@ define(['orm', 'Interface'], function (Orm, Interface, ModuleName) {
         var self = this, model = Orm.loadModel(ModuleName);
         
         var interface = new Interface();
-        var aio = new interface.Aio(port);
+        var aio = new interface.AIO(port);
 
         this.getInt = function() {
             return aio.read();
