@@ -6,12 +6,7 @@
 define(['GPIO', 'logger'], function (GPIO, Logger, ModuleName) {
     return function (devData) {
         var self = this;
-        
-        try {
-            var gpio = new GPIO(devData.port, 'out', devData.init);
-        } catch (e) {
-            Logger.info('Error initializing interface: ' + e);
-        }
+        var gpio = new GPIO(devData.port, 'out', devData.init);
         
         self.getValue = function() {
             return gpio.value;

@@ -12,7 +12,8 @@ define(['logger'], function (Logger, ModuleName) {
         var I2C = Java.type('mraa.I2c');
 
         return function() {
-            Logger.info('Interface module is initialized in normal');
+            Logger.info('Interface module is initialized in normal mode');
+            
             this.getMraa = function() {
                 return mraa;
             };

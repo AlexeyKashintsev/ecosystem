@@ -6,12 +6,7 @@
 define(['AIO', 'logger'], function (AIO, Logger, ModuleName) {
     return function (devData) {
         var self = this;
-        
-        try {
-            var aio = new AIO(devData.port);
-        } catch (e) {
-            Logger.info('Error initializing interface: ' + e);
-        }
+        var aio = new AIO(devData.port);
         
         self.getRawValue = function() {
             return aio.value;
