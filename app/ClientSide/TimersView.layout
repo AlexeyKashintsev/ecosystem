@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?><layout title="" view="view">
+  <AnchorsPane background="#ffffff" cursor="0" name="view" prefHeight="441px" prefWidth="593px"/>
+  <SplitPane cursor="0" dividerLocation="245" foreground="#000000" leftComponent="panel" name="splitPane" parent="view" prefHeight="390px" prefWidth="593px" rightComponent="panel1">
+    <font family="Tahoma" size="11" style="0"/>
+    <AnchorsPaneConstraints height="390px" left="0px" right="0px" top="0px"/>
+  </SplitPane>
+  <AnchorsPane background="#ffffff" cursor="0" name="panel" parent="splitPane" prefHeight="388px" prefWidth="244px"/>
+  <ModelGrid cursor="0" data="qTimers" name="mgTimers" parent="panel" prefHeight="328px" prefWidth="244px">
+    <AnchorsPaneConstraints bottom="0px" left="0px" right="0px" top="60px"/>
+    <ServiceGridColumn name="colService"/>
+    <ModelGridColumn field="timer_name" name="colTimer_name" title="Наименование" width="103px">
+      <ModelFormattedField/>
+    </ModelGridColumn>
+    <ModelGridColumn field="time" name="colTime" title="Время" width="103px">
+      <ModelDate format="HH:mm:ss"/>
+    </ModelGridColumn>
+  </ModelGrid>
+  <ToolBar cursor="0" name="toolBar" parent="panel" prefHeight="30px" prefWidth="244px">
+    <AnchorsPaneConstraints height="30px" left="0px" top="30px" width="244px"/>
+  </ToolBar>
+  <Button cursor="0" focusable="false" horizontalTextPosition="0" name="btnAdd" parent="toolBar" prefHeight="30px" prefWidth="70px" text="Добавить" verticalTextPosition="3"/>
+  <Button cursor="0" focusable="false" horizontalTextPosition="0" name="btnDel" parent="toolBar" prefHeight="30px" prefWidth="70px" text="Удалить" verticalTextPosition="3"/>
+  <Label cursor="0" name="label1" parent="panel" prefHeight="30px" prefWidth="100px" text="Таймеры">
+    <AnchorsPaneConstraints height="30px" left="10px" top="0px" width="100px"/>
+  </Label>
+  <AnchorsPane background="#ffffff" cursor="0" name="panel1" parent="splitPane" prefHeight="388px" prefWidth="342px"/>
+  <Label cursor="0" name="label" parent="panel1" prefHeight="30px" prefWidth="230px" text="Действия по таймеру">
+    <AnchorsPaneConstraints height="30px" left="10px" top="0px" width="230px"/>
+  </Label>
+  <ModelGrid cursor="0" data="qActCon" name="mgActions" parent="panel1" prefHeight="328px" prefWidth="342px">
+    <AnchorsPaneConstraints bottom="0px" left="0px" right="0px" top="60px"/>
+    <ServiceGridColumn name="colService"/>
+    <ModelGridColumn field="Actions" name="colDeviceName" readonly="true" title="Устройство" width="152px">
+      <ModelCombo displayField="name" displayList="qActions4Select" list="false"/>
+    </ModelGridColumn>
+    <ModelGridColumn field="Actions" name="colAction" title="Действие" width="152px">
+      <ModelCombo displayField="action_name" displayList="qActions4Select"/>
+    </ModelGridColumn>
+  </ModelGrid>
+  <ToolBar cursor="0" name="toolBar1" parent="panel1" prefHeight="30px" prefWidth="340px">
+    <AnchorsPaneConstraints height="30px" left="0px" top="30px" width="340px"/>
+  </ToolBar>
+  <Button cursor="0" focusable="false" horizontalTextPosition="0" name="btnAddAction" parent="toolBar1" prefHeight="30px" prefWidth="70px" text="Добавить" verticalTextPosition="3"/>
+  <Button cursor="0" focusable="false" horizontalTextPosition="0" name="btnDelAction" parent="toolBar1" prefHeight="30px" prefWidth="70px" text="Удалить" verticalTextPosition="3"/>
+  <Button cursor="0" name="button" parent="view" prefHeight="30px" prefWidth="100px" text="Сохранить">
+    <AnchorsPaneConstraints bottom="11px" height="30px" right="233px" width="100px"/>
+  </Button>
+  <Button cursor="0" name="button1" parent="view" prefHeight="30px" prefWidth="100px" text="Отмена">
+    <AnchorsPaneConstraints bottom="11px" height="30px" right="13px" width="100px"/>
+  </Button>
+  <Button cursor="0" focusable="false" horizontalTextPosition="0" name="btnRequery" parent="view" prefHeight="30px" prefWidth="100px" text="Сбросить" verticalTextPosition="3">
+    <AnchorsPaneConstraints bottom="11px" height="30px" right="123px" width="100px"/>
+  </Button>
+</layout>

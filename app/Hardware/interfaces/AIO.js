@@ -14,26 +14,19 @@ define(['logger', 'Interface'], function (Logger, Interface, ModuleName) {
      * @returns {undefined}
      */
     return function (port) {
-        //Инициализация контекста возращаемой функции-коструктора
         var self = this;
         
         Logger.info('Initializing module AIO on port: ' + port);
         
-        //Инициализация интерфейсов, определенных на нижнем уровне
         var interface = new Interface();
-        //Инициализация аналогового интерфейса, определенного на нижнем уровне
         var aio = new interface.AIO(port);
         
-        //Определение свойства value, доступного только для чтения, возвращающего
-        //целочисленное значение (основное значение интерфейса)
         Object.defineProperty(self, 'value', {
             get: function() {
                 return aio.read();
             }
         });
         
-        //Определение свойства floatValue, доступного только для чтения, возвращающего
-        //значение с плавающей точкой
         Object.defineProperty(self, 'floatValue', {
             get: function() {
                 return aio.readFloat();

@@ -1,12 +1,13 @@
 /**
  * 
  * @author Алексей
+ * @module Devices
  * @resident
  * @public 
- * @module Devices
  */
 define(['orm', 'logger', 'Trigger', 'TemperatureSensor'], function (Orm
 , Logger, Trigger, TemperatureSensor, ModuleName) {
+    Logger.info('Module devices starting...');
     return function () {
         var self = this, model = Orm.loadModel(ModuleName);
         var devs = {};

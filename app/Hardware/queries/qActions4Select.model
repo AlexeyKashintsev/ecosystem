@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><datamodel>
+  <parametersEntity entityHeight="200" entityIconified="false" entityLocationX="8" entityLocationY="7" entityWidth="150"/>
+  <entity Title="" entityHeight="200" entityIconified="false" entityId="145138028012360" entityLocationX="535" entityLocationY="12" entityWidth="150" tableAlias="t" tableName="eco_devices" tableSchemaName=""/>
+  <entity Title="" entityHeight="200" entityIconified="false" entityId="145138028012051" entityLocationX="365" entityLocationY="12" entityWidth="150" tableAlias="t1" tableName="eco_actions" tableSchemaName=""/>
+  <relation leftEntityFieldName="device_id" leftEntityId="145138028012051" rightEntityFieldName="eco_devices_id" rightEntityId="145138028012360"/>
+</datamodel>

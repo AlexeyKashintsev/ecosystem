@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><datamodel>
+  <entity Name="qActCon" Title="" entityHeight="200" entityIconified="false" entityId="145139055499359" entityLocationX="246" entityLocationY="20" entityWidth="150" queryId="qActCon" tableName="" tableSchemaName=""/>
+  <entity Name="qTimers" Title="" entityHeight="103" entityIconified="false" entityId="145139054711346" entityLocationX="70" entityLocationY="20" entityWidth="150" queryId="qTimers" tableName="" tableSchemaName=""/>
+  <referenceRelation leftEntityFieldName="timer" leftEntityId="145139055499359" rightEntityFieldName="act_timer_id" rightEntityId="145139054711346"/>
+</datamodel>

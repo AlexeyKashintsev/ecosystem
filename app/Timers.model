@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><datamodel>
-  <entity Name="qActions" Title="" entityHeight="200" entityIconified="false" entityId="144756518244780" entityLocationX="421" entityLocationY="25" entityWidth="150" queryId="qActions" tableName="" tableSchemaName=""/>
-  <entity Name="qTimers" Title="" entityHeight="200" entityIconified="false" entityId="144756465664809" entityLocationX="41" entityLocationY="27" entityWidth="150" queryId="qTimers" tableName="" tableSchemaName=""/>
-  <entity Name="qActCon" Title="" entityHeight="200" entityIconified="false" entityId="144756517829608" entityLocationX="225" entityLocationY="27" entityWidth="150" queryId="qActCon" tableName="" tableSchemaName=""/>
-  <referenceRelation collectionPropertyName="cons" leftEntityFieldName="action" leftEntityId="144756517829608" rightEntityFieldName="an_actions_id" rightEntityId="144756518244780" scalarPropertyName="acts"/>
-  <referenceRelation leftEntityFieldName="timer" leftEntityId="144756517829608" rightEntityFieldName="act_timer_id" rightEntityId="144756465664809"/>
-</datamodel>
