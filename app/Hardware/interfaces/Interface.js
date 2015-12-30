@@ -9,7 +9,7 @@ define(['logger'], function (Logger, ModuleName) {
         var Gpio = Java.type('mraa.Gpio');
         var Dir = Java.type('mraa.Dir');
         var Aio = Java.type('mraa.Aio');
-        var I2C = Java.type('mraa.I2c');
+//        var I2C = Java.type('mraa.I2c');
 
         return function() {
             Logger.info('Interface module is initialized in normal mode');
@@ -21,7 +21,7 @@ define(['logger'], function (Logger, ModuleName) {
             this.GPIO = Gpio;
             this.DIR = Dir;
             this.AIO = Aio;
-            this.I2C = I2C;            
+//            this.I2C = I2C;            
         };
     } catch(e) {
         return function() {

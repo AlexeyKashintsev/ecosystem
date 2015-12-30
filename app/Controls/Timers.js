@@ -60,12 +60,10 @@ define(['orm', 'rpc', 'WatchDog', 'logger'], function (Orm, Lpc, WatchDog, Logge
         
         function timerCheck() {
             var time = new Date();
-            Logger.info('New time check ' + time.toTimeString());
+//            Logger.info('New time check ' + time.toTimeString());
             var hh = time.getHours();
-            Logger.info('The hour is ' + hh);
             if (timers[hh]) {
                 var mm = time.getMinutes();
-                Logger.info('The minute is ' + mm);
                 if (timers[hh][mm]) {
                     Logger.info('Timers found ' + timers[hh][mm].length);
                     timers[hh][mm].forEach(function(timer) {
