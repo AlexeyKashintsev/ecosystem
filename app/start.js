@@ -6,8 +6,8 @@ require(['facade'], function (F) {
     var global = this;
     F.cacheBust(true);
     F.export(global);
-    require('TimersView', function(TimersView){
-        var m = new TimersView();
+    require('ActionsView', function(ActionsView){
+        var m = new ActionsView();
         m.show();
     }, function(e){
         F.Logger.severe(e);

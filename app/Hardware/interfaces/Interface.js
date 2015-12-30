@@ -34,6 +34,7 @@ define(['logger'], function (Logger, ModuleName) {
                 this.read = function() {
                     return state;
                 };
+                this.dir = function() {};
             };
             this.AIO = function() {
                 this.read = function() {
@@ -42,6 +43,10 @@ define(['logger'], function (Logger, ModuleName) {
                 this.readFloat = function() {
                     return Math.random(1000)/1000;
                 };
+            };
+            this.DIR = {
+                DIR_OUT:    'DIR_OUT',
+                DIR_IN:     'DIR_IN'
             };
         };
     };
