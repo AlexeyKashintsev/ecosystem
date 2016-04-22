@@ -4,7 +4,7 @@
  */
 require(['facade', 'logger'], function (F, Logger) {
     var global = this;
-    F.cacheBust(true);
+//    F.cacheBust(true);
     F.export(global);
     require('ActionsView', function(ActionsView){
         var m = new ActionsView();

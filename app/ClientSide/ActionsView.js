@@ -2,19 +2,14 @@
  * 
  * @author Алексей
  */
-define('ActionsView', ['orm', 'FormLoader', 'rpc'],
-        function (Orm, FormLoader, Rpc, ModuleName) {
+define('ActionsView', ['orm', 'FormLoader', 'rpc', 'forms/label', 'forms/model-spin', 'forms/model-check-box', 'forms/anchors', 'forms/anchors-pane'],
+        function (Orm, FormLoader, Rpc, Label, ModelSpin, ModelCheckBox, Anchors, AnchorsPane, ModuleName) {
             function module_constructor() {
                 var self = this,
                         model = Orm.loadModel(ModuleName),
                         form = FormLoader(ModuleName, model, self);
-
                 //var servDev = new Rpc.Proxy('Devices');
-
-                self.show = function () {
-                    form.show();
-                };
-
+               
                 model.requery();
 
                 var settings = {}, set_count = 0, setData = {}, data;
@@ -23,14 +18,14 @@ define('ActionsView', ['orm', 'FormLoader', 'rpc'],
                     settings = {};
                     set_count = 0;
                     setData = {};
-                }
+                }                
 
                 function fillSettings(aSetConf, aDevConf) {
                     var setConf = JSON.parse(aSetConf);
                     setData = aDevConf ? JSON.parse(aDevConf) : {};
                     for (var j in setConf) {
                         settings[j] = {};
-                        settings[j].label = new P.Label();
+                        settings[j].label = new Label();
                         settings[j].label.text = setConf[j].description;
                         settings[j].label.height = 25;
                         if (setData[j] === undefined)
@@ -39,24 +34,24 @@ define('ActionsView', ['orm', 'FormLoader', 'rpc'],
                         switch (setConf[j].value_type) {
                             case 'integer':
                             {
-                                settings[j].control = new P.ModelSpin();
+                                settings[j].control = new ModelSpin();
                                 settings[j].control.value = setData[j];
                                 settings[j].control.height = 30;
                                 break;
                             }
                             case 'boolean':
                             {
-                                settings[j].control = new P.ModelCheckBox();
+                                settings[j].control = new ModelCheckBox();
                                 settings[j].control.value = setData[j];
                                 settings[j].control.height = 30;
                                 break;
                             }
                         }
 
-                        var pnl = new P.AnchorsPane();
+                        var pnl = new AnchorsPane();
                         pnl.height = 30;
-                        pnl.add(settings[j].label, new P.Anchors(0, null, 150, 0, 25, 0));
-                        pnl.add(settings[j].control, new P.Anchors(150, null, 0, 0, 30, 0));
+                        pnl.add(settings[j].label, new Anchors(0, null, 150, 0, 25, 0));
+                        pnl.add(settings[j].control, new Anchors(150, null, 0, 0, 30, 0));
                         form.pnlSettings.add(pnl);
                         set_count++;
                     }

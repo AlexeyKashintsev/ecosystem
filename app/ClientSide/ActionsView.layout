@@ -2,13 +2,13 @@
   <AnchorsPane background="#ffffff" cursor="0" name="view" prefHeight="453px" prefWidth="487px"/>
   <ModelGrid cursor="0" data="qActions" name="mgActions" parent="view" prefHeight="240px" prefWidth="487px" rowsHeight="20">
     <AnchorsPaneConstraints bottom="182px" left="0px" right="0px" top="31px"/>
-    <ModelGridColumn field="act_device" name="colDevName" title="Устройство" width="157px">
+    <ModelGridColumn field="act_device" name="colDevName" title="Устройство" width="156px">
       <ModelCombo displayField="name" displayList="qDevices"/>
     </ModelGridColumn>
-    <ModelGridColumn field="act_def" name="colActType" title="Тип" width="157px">
+    <ModelGridColumn field="act_def" name="colActType" title="Тип" width="156px">
       <ModelCombo displayField="act_name" displayList="qActionsByType"/>
     </ModelGridColumn>
-    <ModelGridColumn field="action_name" name="clActName" title="Действие" width="157px">
+    <ModelGridColumn field="action_name" name="clActName" title="Действие" width="156px">
       <ModelFormattedField format=""/>
     </ModelGridColumn>
   </ModelGrid>
@@ -32,4 +32,10 @@
   <Button cursor="0" name="btnCancel" parent="view" prefHeight="30px" prefWidth="90px" text="Отмена">
     <AnchorsPaneConstraints bottom="9px" height="30px" right="10px" width="90px"/>
   </Button>
+  <TextField name="textField" parent="view" prefHeight="20px" prefWidth="48px" text="textField">
+    <AnchorsPaneConstraints bottom="13px" height="20px" left="110px" width="48px"/>
+  </TextField>
+  <Label cursor="0" name="label" parent="view" prefHeight="30px" prefWidth="100px" text="label">
+    <AnchorsPaneConstraints bottom="3px" height="30px" left="170px" width="100px"/>
+  </Label>
 </layout>
