@@ -1,8 +1,0 @@
-clientLogLevel=INFO
-serverLogLevel=INFO
-debugClientPort=8900
-debugServerPort=8901
-serverType=j2ee
-j2eeServerId=tomcat80:home=/Applications/p5/apache-tomcat-8.0.26
-clientType=html
-defaultDataSource=sm_serv_dev
