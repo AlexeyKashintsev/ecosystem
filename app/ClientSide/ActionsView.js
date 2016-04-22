@@ -9,7 +9,7 @@ define('ActionsView', ['orm', 'FormLoader', 'rpc'],
                         model = Orm.loadModel(ModuleName),
                         form = FormLoader(ModuleName, model, self);
 
-                var servDev = new Rpc.Proxy('Devices');
+                //var servDev = new Rpc.Proxy('Devices');
 
                 self.show = function () {
                     form.show();
