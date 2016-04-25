@@ -32,10 +32,4 @@
   <Button cursor="0" name="btnCancel" parent="view" prefHeight="30px" prefWidth="90px" text="Отмена">
     <AnchorsPaneConstraints bottom="9px" height="30px" right="10px" width="90px"/>
   </Button>
-  <TextField name="textField" parent="view" prefHeight="20px" prefWidth="48px" text="textField">
-    <AnchorsPaneConstraints bottom="13px" height="20px" left="110px" width="48px"/>
-  </TextField>
-  <Label cursor="0" name="label" parent="view" prefHeight="30px" prefWidth="100px" text="label">
-    <AnchorsPaneConstraints bottom="3px" height="30px" left="170px" width="100px"/>
-  </Label>
 </layout>

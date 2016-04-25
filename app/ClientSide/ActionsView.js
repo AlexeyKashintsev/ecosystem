@@ -2,8 +2,8 @@
  * 
  * @author Алексей
  */
-define('ActionsView', ['orm', 'FormLoader', 'rpc', 'forms/label', 'forms/model-spin', 'forms/model-check-box', 'forms/anchors', 'forms/anchors-pane'],
-        function (Orm, FormLoader, Rpc, Label, ModelSpin, ModelCheckBox, Anchors, AnchorsPane, ModuleName) {
+define('ActionsView', ['orm', 'FormLoader', 'rpc', 'Widgets'],
+        function (Orm, FormLoader, Rpc, Widgets, ModuleName) {
             function module_constructor() {
                 var self = this,
                         model = Orm.loadModel(ModuleName),
@@ -25,7 +25,7 @@ define('ActionsView', ['orm', 'FormLoader', 'rpc', 'forms/label', 'forms/model-s
                     setData = aDevConf ? JSON.parse(aDevConf) : {};
                     for (var j in setConf) {
                         settings[j] = {};
-                        settings[j].label = new Label();
+                        settings[j].label = new Widgets.Label();
                         settings[j].label.text = setConf[j].description;
                         settings[j].label.height = 25;
                         if (setData[j] === undefined)
@@ -34,24 +34,24 @@ define('ActionsView', ['orm', 'FormLoader', 'rpc', 'forms/label', 'forms/model-s
                         switch (setConf[j].value_type) {
                             case 'integer':
                             {
-                                settings[j].control = new ModelSpin();
+                                settings[j].control = new Widgets.ModelSpin();
                                 settings[j].control.value = setData[j];
                                 settings[j].control.height = 30;
                                 break;
                             }
                             case 'boolean':
                             {
-                                settings[j].control = new ModelCheckBox();
+                                settings[j].control = new Widgets.ModelCheckBox();
                                 settings[j].control.value = setData[j];
                                 settings[j].control.height = 30;
                                 break;
                             }
                         }
 
-                        var pnl = new AnchorsPane();
+                        var pnl = new Widgets.AnchorsPane();
                         pnl.height = 30;
-                        pnl.add(settings[j].label, new Anchors(0, null, 150, 0, 25, 0));
-                        pnl.add(settings[j].control, new Anchors(150, null, 0, 0, 30, 0));
+                        pnl.add(settings[j].label, new Widgets.Anchors(0, null, 150, 0, 25, 0));
+                        pnl.add(settings[j].control, new Widgets.Anchors(150, null, 0, 0, 30, 0));
                         form.pnlSettings.add(pnl);
                         set_count++;
                     }
