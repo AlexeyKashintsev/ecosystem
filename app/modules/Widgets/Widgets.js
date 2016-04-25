@@ -3,7 +3,6 @@
  * @author User
  */
 define('Widgets', [
-    'orm',
     'forms/action-event',
     'forms/anchors',
     'forms/anchors-pane',

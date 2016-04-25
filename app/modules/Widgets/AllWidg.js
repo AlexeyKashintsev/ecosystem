@@ -3,7 +3,6 @@
  * @author User
  */
 define('AllWidg', [
-    'orm',
     'forms/action-event',
     'forms/anchors',
     'forms/anchors-pane',
@@ -61,7 +60,6 @@ define('AllWidg', [
     'forms/window-event'
 
 ], function (
-        Orm,
         ActionEvent,
         Anchors,
         AnchorsPane,
