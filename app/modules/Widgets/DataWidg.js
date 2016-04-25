@@ -60,10 +60,6 @@ define('DataWidg', [
     'forms/window-event'
 
 ], function (
-        Orm,
-        ActionEvent,
-        Anchors,
-        AnchorsPane,
         BorderPane,
         BoxPane,
         Button,

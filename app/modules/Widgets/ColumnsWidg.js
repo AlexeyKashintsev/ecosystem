@@ -60,10 +60,6 @@ define('ColumnsWidg', [
     'forms/window-event'
 
 ], function (
-        Orm,
-        ActionEvent,
-        Anchors,
-        AnchorsPane,
         BorderPane,
         BoxPane,
         Button,
@@ -175,5 +171,4 @@ define('ColumnsWidg', [
         ValueChangeEvent: ValueChangeEvent,
         WindowEvent: WindowEvent
     };
-
 });
