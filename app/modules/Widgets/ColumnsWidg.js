@@ -59,39 +59,13 @@ define('ColumnsWidg', [
     'forms/value-change-event',
     'forms/window-event'
 
-], function (
-        BorderPane,
-        BoxPane,
-        Button,
-        ButtonGroup,
-        CardPane,
-        CellRenderEvent,
-        CheckBox,
+], function (        
         CheckGridColumn,
-        CheckMenuItem,
-        ComponentEvent,
-        ContainerEvent,
-        DesktopPane,
-        DropDownButton,
-        FlowPane,
-        FocusEvent,
-        Form,
-        FormattedField,
-        GridPane,
-        HtmlArea,
-        ItemEvent,
-        KeyEvent,
-        Label,
-        Menu,
-        MenuBar,
-        MenuItem,
-        MenuSeparator,
-        ModelCheckBox,
-        ModelCombo,
-        ModelDate,
-        ModelFormattedField,
-        ModelGrid,
         ModelGridColumn,
+        
+        
+        
+        
         ModelSpin,
         ModelTextArea,
         MouseEvent,
