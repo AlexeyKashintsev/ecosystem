@@ -1,105 +1,104 @@
-/* global P */
 /**
  * 
  * @author Алексей
- * @module DevicesView
- * {global P}
  */
-function DevicesView() {
-    var self = this
-            , model = P.loadModel(this.constructor.name)
-            , form = P.loadForm(this.constructor.name, model);
-    var servDev = new P.ServerModule('Devices');
-    
-    self.show = function () {
-        form.show();
-    };
+define('DevicesView', ['orm', 'FormLoader', 'rpc', 'Widgets', 'DataWidg', 'ContainersWidg'],
+        function (Orm, FormLoader, Rpc, Widgets, DataWidg, ContainersWidg, ModuleName) {
+            function module_constructor() {
+                var self = this,
+                        model = Orm.loadModel(ModuleName),
+                        form = FormLoader(ModuleName, model, self);
+                var servDev = new Rpc.Proxy('Devices');
 
-    model.requery();
-    
-    var settings = {}, set_count = 0, setData = {}, data;
-    function clearSettings() {
+                model.requery();
+
+                var settings = {}, set_count = 0, setData = {}, data;
+                function clearSettings() {
 //        for (var j in settings) {
 ////            form.pnlSettings.remove(settings[j].label);
 ////            form.pnlSettings.remove(settings[j].control);
 //            delete settings[j];
 //        }
-        form.pnlSettings.clear();
-        settings = {};
-        set_count = 0;
-        setData = {};
-    }
-    
-    function fillSettings(aSetConf, aDevConf) {
-        var setConf = JSON.parse(aSetConf);
-        setData = aDevConf ? JSON.parse(aDevConf) : {};
-        for (var j in setConf) {
-            settings[j] = {};
-            settings[j].label =  new P.Label();
-            settings[j].label.text = setConf[j].description;
-            settings[j].label.height = 25;
-            if (setData[j] === undefined)
-                setData[j] = null;
-            
-            switch (setConf[j].value_type) {
-                case 'integer': {
-                    settings[j].control = new P.ModelSpin();
-                    settings[j].control.value = setData[j];
-                    settings[j].control.height = 30;
-                    break;
+                    form.pnlSettings.clear();
+                    settings = {};
+                    set_count = 0;
+                    setData = {};
                 }
-                case 'boolean': {
-                    settings[j].control = new P.ModelCheckBox();
-                    settings[j].control.value = setData[j];
-                    settings[j].control.height = 30;
-                    break;
-                }
-            }
-            
-            var pnl = new P.AnchorsPane();
-            pnl.height = 30;
-            pnl.add(settings[j].label, new P.Anchors(0, null, 150, 0, 25, 0));
-            pnl.add(settings[j].control, new P.Anchors(150, null, 0, 0, 30, 0));
-            form.pnlSettings.add(pnl);
-            set_count++;
-        }
-    }
-    
-    function applySettings() {
-        for (var j in setData) {
-            try {
-                setData[j] = settings[j].control.value;
-            } catch (e) {
-                console.log('Probably bad device setting data. Error: ' + e);
-            }
-        }
-        data.dev_data = JSON.stringify(setData);
-    };
-    
-    form.btnAdd.onActionPerformed = function(event) {
-        model.qDevices.push({});
-    };
-    
-    form.mgDevices.onItemSelected = function(event) {
-        if (data)
-            applySettings();
-        clearSettings();
-        data = event.item;
-        fillSettings(event.item.dev_types.required_settings, data.dev_data);
-    };
-    form.btnDel.onActionPerformed = function(event) {
-        delete form.mgDevices.selected[0];
-    };
-    form.btnRequery.onActionPerformed = function(event) {
-        model.requery();
-    };
 
-    form.btnSave.onActionPerformed = function(event) {
-        model.save(function() {
-            servDev.devLoadConfFromDatabase(function() {});
+                function fillSettings(aSetConf, aDevConf) {
+                    var setConf = JSON.parse(aSetConf ? aSetConf : null);
+                    setData = aDevConf ? JSON.parse(aDevConf) : {};
+                    for (var j in setConf) {
+                        settings[j] = {};
+                        settings[j].label = new Widgets.Label();
+                        settings[j].label.text = setConf[j].description;
+                        settings[j].label.height = 25;
+                        if (setData[j] === undefined)
+                            setData[j] = null;
+                        switch (setConf[j].value_type) {
+                            case 'integer':
+                            {
+                                settings[j].control = new DataWidg.ModelSpin();
+                                settings[j].control.value = setData[j];
+                                settings[j].control.height = 30;
+                                break;
+                            }
+                            case 'boolean':
+                            {
+                                settings[j].control = new DataWidg.ModelCheckBox();
+                                settings[j].control.value = setData[j];
+                                settings[j].control.height = 30;
+                                break;
+                            }
+                        }
+
+                        var pnl = new ContainersWidg.AnchorsPane();
+                        pnl.height = 30;
+                        pnl.add(settings[j].label, new ContainersWidg.Anchors(0, null, 150, 0, 25, 0));
+                        pnl.add(settings[j].control, new ContainersWidg.Anchors(150, null, 0, 0, 30, 0));
+                        form.pnlSettings.add(pnl);
+                        set_count++;
+                    }
+                }
+
+                function applySettings() {
+                    for (var j in setData) {
+                        try {
+                            setData[j] = settings[j].control.value;
+                        } catch (e) {
+                            console.log('Probably bad device setting data. Error: ' + e);
+                        }
+                    }
+                    data.dev_data = JSON.stringify(setData);
+                }
+                ;
+                form.btnAdd.onActionPerformed = function (event) {
+                    model.qDevices.push({});
+                };
+                form.mgDevices.onItemSelected = function (event) {
+                    console.log(event.item);
+                    if (data)
+                        applySettings();
+                    clearSettings();
+                    data = event.item;
+                    if (event.item.dev_types)
+                    fillSettings(event.item.dev_types.required_settings, data.dev_data);
+                };
+                form.btnDel.onActionPerformed = function (event) {
+                    model.qDevices.remove(form.mgDevices.selected);
+                };
+                form.btnRequery.onActionPerformed = function (event) {
+                    model.requery();
+                };
+                form.btnSave.onActionPerformed = function (event) {
+                    model.save(function () {
+                        servDev.devLoadConfFromDatabase(function () {});
+                    });
+                };
+                form.btnCancel.onActionPerformed = function (event) {
+                    form.close();
+                };
+            }
+            return module_constructor;
         });
-    };
-    form.btnCancel.onActionPerformed = function(event) {
-        form.close();
-    };
-};
+

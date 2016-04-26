@@ -9,7 +9,7 @@ define('ActionsView', ['orm', 'FormLoader', 'rpc', 'Widgets', 'DataWidg', 'Conta
                         model = Orm.loadModel(ModuleName),
                         form = FormLoader(ModuleName, model, self);
                 var servDev = new Rpc.Proxy('Devices');
-               
+
                 model.requery();
 
                 var settings = {}, set_count = 0, setData = {}, data;
@@ -18,7 +18,7 @@ define('ActionsView', ['orm', 'FormLoader', 'rpc', 'Widgets', 'DataWidg', 'Conta
                     settings = {};
                     set_count = 0;
                     setData = {};
-                }                
+                }
 
                 function fillSettings(aSetConf, aDevConf) {
                     // TODO Датчик влажности не отображает значение, aSetConf пуст
