@@ -1,9 +1,8 @@
 /**
  * 
  * @author Alexey
- * @module Interface
  */
-define(['logger'], function (Logger, ModuleName) {
+define('Interface',['logger'], function (Logger, ModuleName) {
     try {
         var mraa = Java.type('mraa.mraa');
         var Gpio = Java.type('mraa.Gpio');

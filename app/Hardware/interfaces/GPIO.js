@@ -1,9 +1,8 @@
 /**
  * 
  * @author Alexey
- * @module GPIO
  */
-define(['logger', 'Interface'], function (Logger, Interface, ModuleName) {
+define('GPIO',['logger', 'Interface'], function (Logger, Interface, ModuleName) {
     return function (port, dir, init) {
         var self = this;
         

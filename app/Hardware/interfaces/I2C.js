@@ -1,9 +1,8 @@
 /**
  * 
  * @author Alexey
- * @module I2C
  */
-define(['logger', 'Interface'], function (Logger, Interface, ModuleName) {
+define('I2C',['logger', 'Interface'], function (Logger, Interface, ModuleName) {
     return function(port, anAdress) {
         var self = this;
         var interface = new Interface();

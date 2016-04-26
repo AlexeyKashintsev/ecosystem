@@ -1,6 +1,5 @@
 /**
  * @author Alexey
- * @module AIO 
  * Модуль-обертка над модулем нижнего уровня определения интерфейсов,
  * отвечающий за инициализацию аналогового порта
  * @param {type} Logger Модуль, отвечающий за логирование
@@ -8,7 +7,7 @@
  * @param {type} ModuleName Имя текущего модуля
  * @returns {Function} Функция-конструктор, определяющая объект
  */
-define(['logger', 'Interface'], function (Logger, Interface, ModuleName) {
+define('AIO',['logger', 'Interface'], function (Logger, Interface, ModuleName) {
     /**
      * Функция-конструктор, определяющая объект с полями value и floatValue
      * @param {type} port Номер порта инициализируемого интерфейса

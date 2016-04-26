@@ -1,11 +1,10 @@
 /**
  * 
  * @author Алексей
- * @module Devices
  * @resident
  * @public 
  */
-define(['orm', 'logger', 'Trigger', 'TemperatureSensor'], function (Orm
+define('Devices',['orm', 'logger', 'Trigger', 'TemperatureSensor'], function (Orm
 , Logger, Trigger, TemperatureSensor, ModuleName) {
     Logger.info('Module devices starting...');
     return function () {

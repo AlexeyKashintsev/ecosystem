@@ -1,9 +1,8 @@
 /**
  * 
  * @author Alexey
- * @module ErrorThrow
  */
-define(['orm'], function (Orm, ModuleName) {
+define('ErrorThrow',['orm'], function (Orm, ModuleName) {
     return function () {
         var self = this, model = Orm.loadModel(ModuleName);
         

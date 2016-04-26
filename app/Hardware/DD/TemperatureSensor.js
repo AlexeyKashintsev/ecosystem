@@ -1,9 +1,8 @@
 /**
  * 
  * @author Алексей
- * @module TemperatureSensor
  */
-define(['AIO', 'logger'], function (AIO, Logger, ModuleName) {
+define('TemperatureSensor',['AIO', 'logger'], function (AIO, Logger, ModuleName) {
     return function (devData) {
         var self = this;
         var aio = new AIO(devData.port);
