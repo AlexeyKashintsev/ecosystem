@@ -83,7 +83,8 @@ define('ActionsView', ['orm', 'FormLoader', 'rpc', 'Widgets', 'DataWidg', 'Conta
                 };
 
                 form.btnDel.onActionPerformed = function (event) {
-                    delete form.qActions.selected[0];
+                    model.qActions.remove(form.mgActions.selected);
+
                 };
                 form.btnRequery.onActionPerformed = function (event) {
                     model.requery();

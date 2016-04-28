@@ -5,7 +5,7 @@
  * @resident
  * @public
  */
-define(['orm', 'rpc', 'WatchDog', 'logger'], function (Orm, Lpc, WatchDog, Logger, ModuleName) {
+define('Timers', ['orm', 'rpc', 'WatchDog', 'logger'], function (Orm, Lpc, WatchDog, Logger, ModuleName) {
     return function () {
         var self = this, model = Orm.loadModel(ModuleName);
         var devices = new Lpc.Proxy('Devices');

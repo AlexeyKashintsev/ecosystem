@@ -2,8 +2,7 @@
   <entity Name="qActions4Select" Title="" entityHeight="200" entityIconified="false" entityId="145138031047468" entityLocationX="509" entityLocationY="43" entityWidth="150" queryId="qActions4Select" tableName="" tableSchemaName=""/>
   <entity Name="qTimers" Title="" entityHeight="200" entityIconified="false" entityId="145137975765496" entityLocationX="107" entityLocationY="51" entityWidth="150" queryId="qTimers" tableName="" tableSchemaName=""/>
   <entity Name="qActCon" Title="" entityHeight="200" entityIconified="false" entityId="145137976134148" entityLocationX="292" entityLocationY="51" entityWidth="150" queryId="qActCon" tableName="" tableSchemaName=""/>
-  <relation leftEntityFieldName="act_timer_id" leftEntityId="145137975765496" rightEntityId="145137976134148" rightEntityParameterName="timer"/>
-  <referenceRelation leftEntityFieldName="timer" leftEntityId="145137976134148" rightEntityFieldName="act_timer_id" rightEntityId="145137975765496"/>
   <referenceRelation leftEntityFieldName="device_id" leftEntityId="145138031047468" rightEntityFieldName="eco_devices_id" rightEntityId="145138031047468"/>
-  <referenceRelation collectionPropertyName="Connector" leftEntityFieldName="action" leftEntityId="145137976134148" rightEntityFieldName="eco_actions_id" rightEntityId="145138031047468" scalarPropertyName="Actions"/>
+  <referenceRelation collectionPropertyName="ActionsCon" leftEntityFieldName="action" leftEntityId="145137976134148" rightEntityFieldName="eco_actions_id" rightEntityId="145138031047468" scalarPropertyName="Actions"/>
+  <referenceRelation leftEntityFieldName="timer" leftEntityId="145137976134148" rightEntityFieldName="act_timer_id" rightEntityId="145137975765496"/>
 </datamodel>

@@ -3,39 +3,45 @@
  * @author Алексей
  * {global P}
  */
-function TimersView() {
-    var self = this
-            , model = P.loadModel(this.constructor.name)
-            , form = P.loadForm(this.constructor.name, model);
-            
-    var timersMod = new P.ServerModule('Timers');
-    
-    self.show = function () {
-        form.show();
-    };
-    
-    model.requery();
-    
-    form.btnAdd.onActionPerformed = function(event) {
-        model.qTimers.push({});
-    };
-    form.btnDel.onActionPerformed = function(event) {
-        delete form.mgTimers.selected[0];
-    };
-    form.btnRequery.onActionPerformed = function(event) {
-        model.requery();
-    };
-    form.btnAddAction.onActionPerformed = function(event) {
-        model.qActCon.push({
-            timer:  form.mgTimers.selected[0].act_timer_id
+
+define('TimersView', ['orm', 'FormLoader', 'rpc', 'Widgets', 'DataWidg', 'ContainersWidg', 'invoke'],
+        function (Orm, FormLoader, Rpc, Widgets, DataWidg, ContainersWidg, Invoke, ModuleName) {
+            function module_constructor() {
+                var self = this,
+                        model = Orm.loadModel(ModuleName),
+                        form = FormLoader(ModuleName, model, self);
+
+                var timersMod = new Rpc.Proxy('Timers');
+
+                model.requery();
+
+                form.btnAdd.onActionPerformed = function (event) {
+                    model.qTimers.push({});
+                    Invoke.later(function () {
+                        form.mgTimers.makeVisible(model.qTimers[model.qTimers.length - 1], true);
+                    });
+                };
+                form.btnDel.onActionPerformed = function (event) {
+                    model.qTimers.remove(form.mgTimers.selected);
+                };
+                form.btnRequery.onActionPerformed = function (event) {
+                    model.requery();
+                };
+                form.btnAddAction.onActionPerformed = function (event) {
+                    model.qActCon.push({
+                        timer: form.mgTimers.selected[0].act_timer_id
+                    });
+                };
+                form.btnDelAction.onActionPerformed = function (event) {
+                    model.qActCon.remove(form.mgActions.selected);
+
+                };
+                form.button.onActionPerformed = function (event) {
+                    model.save(function () {
+                        timersMod.reloadTimers();
+                    });
+                };
+            }
+            return module_constructor;
         });
-    };
-    form.btnDelAction.onActionPerformed = function(event) {
-        delete form.mgActions.selected[0];
-    };
-    form.button.onActionPerformed = function(event) {
-        model.save(function() {
-            timersMod.reloadTimers();
-        });
-    };
-}
+

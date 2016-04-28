@@ -76,7 +76,7 @@ define('DevicesView', ['orm', 'FormLoader', 'rpc', 'Widgets', 'DataWidg', 'Conta
                     model.qDevices.push({});
                 };
                 form.mgDevices.onItemSelected = function (event) {
-                    console.log(event.item);
+                    //console.log(event.item);
                     if (data)
                         applySettings();
                     clearSettings();
