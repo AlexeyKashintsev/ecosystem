@@ -41,6 +41,10 @@ define('TimersView', ['orm', 'FormLoader', 'rpc', 'Widgets', 'DataWidg', 'Contai
                         timersMod.reloadTimers();
                     });
                 };
+                
+                form.btnCancel.onActionPerformed = function (event) {
+                    form.close();
+                };
             }
             return module_constructor;
         });

@@ -4,7 +4,9 @@
     <parameter description="" name="triger" nullable="true" parameterMode="1" selectionForm="null" type="Number"/>
   </parameters>
   <parametersEntity entityHeight="200" entityIconified="false" entityLocationX="8" entityLocationY="7" entityWidth="150"/>
+  <entity Title="" entityHeight="200" entityIconified="false" entityId="146191909268165" entityLocationX="459" entityLocationY="16" entityWidth="150" tableAlias="t" tableName="eco_actions" tableSchemaName=""/>
   <entity Title="" entityHeight="200" entityIconified="false" entityId="144756456255400" entityLocationX="201" entityLocationY="10" entityWidth="150" tableAlias="t1" tableName="act_tt_con" tableSchemaName=""/>
   <relation leftEntityId="-1" leftEntityParameterName="triger" rightEntityFieldName="triger" rightEntityId="144756456255400"/>
+  <relation leftEntityFieldName="action" leftEntityId="144756456255400" rightEntityFieldName="eco_actions_id" rightEntityId="146191909268165"/>
   <relation leftEntityId="-1" leftEntityParameterName="timer" rightEntityFieldName="timer" rightEntityId="144756456255400"/>
 </datamodel>

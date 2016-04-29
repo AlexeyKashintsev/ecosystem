@@ -30,11 +30,11 @@
   <ModelGrid cursor="0" data="qActCon" name="mgActions" parent="panel1" prefHeight="328px" prefWidth="342px">
     <AnchorsPaneConstraints bottom="0px" left="0px" right="0px" top="60px"/>
     <ServiceGridColumn name="colService" resizable="true"/>
-    <ModelGridColumn field="Actions" name="colDeviceName" title="Устройство" width="151px">
-      <ModelCombo displayField="name" displayList="qActions4Select"/>
+    <ModelGridColumn field="devices" name="colDeviceName" title="Устройство" width="151px">
+      <ModelCombo displayField="name" displayList="qDevices"/>
     </ModelGridColumn>
-    <ModelGridColumn field="Actions" name="colAction" title="Действие" width="150px">
-      <ModelCombo displayField="action_name" displayList="qActions4Select"/>
+    <ModelGridColumn field="actions" name="colAction" title="Действие" width="150px">
+      <ModelCombo displayField="action_name" displayList="qActions"/>
     </ModelGridColumn>
   </ModelGrid>
   <ToolBar cursor="0" name="toolBar1" parent="panel1" prefHeight="30px" prefWidth="340px">
@@ -45,7 +45,7 @@
   <Button cursor="0" name="button" parent="view" prefHeight="30px" prefWidth="100px" text="Сохранить">
     <AnchorsPaneConstraints bottom="11px" height="30px" right="233px" width="100px"/>
   </Button>
-  <Button cursor="0" name="button1" parent="view" prefHeight="30px" prefWidth="100px" text="Отмена">
+  <Button cursor="0" name="btnCancel" parent="view" prefHeight="30px" prefWidth="100px" text="Отмена">
     <AnchorsPaneConstraints bottom="11px" height="30px" right="13px" width="100px"/>
   </Button>
   <Button cursor="0" focusable="false" horizontalTextPosition="0" name="btnRequery" parent="view" prefHeight="30px" prefWidth="100px" text="Сбросить" verticalTextPosition="3">

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><datamodel>
+  <parameters>
+    <parameter description="" name="device_id" nullable="true" parameterMode="1" selectionForm="null" type="Number"/>
+  </parameters>
+  <parametersEntity entityHeight="200" entityIconified="false" entityLocationX="16" entityLocationY="18" entityWidth="150"/>
+  <entity Title="" entityHeight="200" entityIconified="false" entityId="144852359057457" entityLocationX="414" entityLocationY="18" entityWidth="150" tableAlias="t1" tableName="eco_actions" tableSchemaName=""/>
+  <relation leftEntityId="-1" leftEntityParameterName="device_id" rightEntityFieldName="device_id" rightEntityId="144852359057457"/>
+</datamodel>
