@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><layout title="" view="view">
+  <AnchorsPane background="#ffffff" cursor="0" name="view" prefHeight="438px" prefWidth="726px"/>
+  <ModelGrid cursor="0" deletable="false" editable="false" insertable="false" name="mgForms" parent="view" prefHeight="440px" prefWidth="160px">
+    <AnchorsPaneConstraints bottom="-2px" left="0px" top="0px" width="160px"/>
+    <RadioGridColumn name="column"/>
+    <ModelGridColumn field="FormName" name="colForms" title="Список форм" width="136px">
+      <ModelFormattedField/>
+    </ModelGridColumn>
+  </ModelGrid>
+  <AnchorsPane background="#ffffff" cursor="0" name="pnlForm" parent="view" prefHeight="440px" prefWidth="566px">
+    <AnchorsPaneConstraints bottom="-2px" left="160px" right="0px" top="0px"/>
+  </AnchorsPane>
+</layout>

@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?><layout title="" view="view">
-  <AnchorsPane background="#ffffff" cursor="0" name="view" prefHeight="441px" prefWidth="593px"/>
-  <SplitPane cursor="0" dividerLocation="245" foreground="#000000" leftComponent="panel" name="splitPane" parent="view" prefHeight="390px" prefWidth="593px" rightComponent="panel1">
+  <AnchorsPane background="#ffffff" cursor="0" name="view" prefHeight="441px" prefWidth="617px"/>
+  <SplitPane cursor="0" dividerLocation="258" foreground="#000000" leftComponent="panel" name="splitPane" parent="view" prefHeight="390px" prefWidth="617px" rightComponent="panel1">
     <font family="Arial" size="11" style="0"/>
     <AnchorsPaneConstraints height="390px" left="0px" right="0px" top="0px"/>
   </SplitPane>
-  <AnchorsPane background="#ffffff" cursor="0" name="panel" parent="splitPane" prefHeight="388px" prefWidth="244px"/>
-  <ModelGrid cursor="0" data="qTimers" name="mgTimers" parent="panel" prefHeight="328px" prefWidth="244px">
+  <AnchorsPane background="#ffffff" cursor="0" name="panel" parent="splitPane" prefHeight="388px" prefWidth="257px"/>
+  <ModelGrid cursor="0" data="qTimers" name="mgTimers" parent="panel" prefHeight="328px" prefWidth="257px">
     <AnchorsPaneConstraints bottom="0px" left="0px" right="0px" top="60px"/>
     <ServiceGridColumn name="colService" resizable="true"/>
-    <ModelGridColumn field="timer_name" name="colTimer_name" title="Наименование" width="102px">
+    <ModelGridColumn field="timer_name" name="colTimer_name" title="Наименование" width="108px">
       <ModelFormattedField format=""/>
     </ModelGridColumn>
-    <ModelGridColumn field="time" name="colTime" title="Время" width="101px">
+    <ModelGridColumn field="time" name="colTime" title="Время" width="108px">
       <ModelDate format="HH:mm:ss"/>
     </ModelGridColumn>
   </ModelGrid>
@@ -23,17 +23,17 @@
   <Label cursor="0" name="label1" parent="panel" prefHeight="30px" prefWidth="100px" text="Таймеры">
     <AnchorsPaneConstraints height="30px" left="10px" top="0px" width="100px"/>
   </Label>
-  <AnchorsPane background="#ffffff" cursor="0" name="panel1" parent="splitPane" prefHeight="388px" prefWidth="342px"/>
+  <AnchorsPane background="#ffffff" cursor="0" name="panel1" parent="splitPane" prefHeight="388px" prefWidth="353px"/>
   <Label cursor="0" name="label" parent="panel1" prefHeight="30px" prefWidth="230px" text="Действия по таймеру">
     <AnchorsPaneConstraints height="30px" left="10px" top="0px" width="230px"/>
   </Label>
-  <ModelGrid cursor="0" data="qActCon" name="mgActions" parent="panel1" prefHeight="328px" prefWidth="342px">
+  <ModelGrid cursor="0" data="qActCon" name="mgActions" parent="panel1" prefHeight="328px" prefWidth="353px">
     <AnchorsPaneConstraints bottom="0px" left="0px" right="0px" top="60px"/>
     <ServiceGridColumn name="colService" resizable="true"/>
-    <ModelGridColumn field="devices" name="colDeviceName" title="Устройство" width="151px">
+    <ModelGridColumn field="devices" name="colDeviceName" title="Устройство" width="156px">
       <ModelCombo displayField="name" displayList="qDevices"/>
     </ModelGridColumn>
-    <ModelGridColumn field="actions" name="colAction" title="Действие" width="150px">
+    <ModelGridColumn field="actions" name="colAction" title="Действие" width="156px">
       <ModelCombo displayField="action_name" displayList="qActions"/>
     </ModelGridColumn>
   </ModelGrid>
