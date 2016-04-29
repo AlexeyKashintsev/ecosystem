@@ -12,10 +12,13 @@ define('Starter', ['orm', 'forms', 'ui', 'ActionsView', 'DevicesView', 'TimersVi
                     form.show();
                 };
 
+                var actionsview = new actionsView();
+                var devisesview = new devisesView();
+                var timersview = new timersView();
                 var objForms = [
                     {FormName: 'ActionsView'},
                     {FormName: 'DevicesView'},
-                    {FormName: 'TimersView'}];
+                    {FormName: 'TimersView'}];                
 
                 form.mgForms.data = objForms;
 
@@ -28,13 +31,8 @@ define('Starter', ['orm', 'forms', 'ui', 'ActionsView', 'DevicesView', 'TimersVi
                             case objForms[1].FormName : devisesview.show(form.pnlForm); break;  
                             case objForms[2].FormName : timersview.show(form.pnlForm); break;  
                         }
-                    }
-                    //form.btnConfig.onActionPerformed();                            
-                };
-
-                var actionsview = new actionsView();
-                var devisesview = new devisesView();
-                var timersview = new timersView();
+                    }                           
+                };                
             }
             return module_constructor;
         });
