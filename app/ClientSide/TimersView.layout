@@ -2,7 +2,7 @@
   <AnchorsPane background="#ffffff" cursor="0" name="view" prefHeight="441px" prefWidth="617px"/>
   <SplitPane cursor="0" dividerLocation="258" foreground="#000000" leftComponent="panel" name="splitPane" parent="view" prefHeight="390px" prefWidth="617px" rightComponent="panel1">
     <font family="Arial" size="11" style="0"/>
-    <AnchorsPaneConstraints height="390px" left="0px" right="0px" top="0px"/>
+    <AnchorsPaneConstraints bottom="51px" left="0px" right="0px" top="0px"/>
   </SplitPane>
   <AnchorsPane background="#ffffff" cursor="0" name="panel" parent="splitPane" prefHeight="388px" prefWidth="257px"/>
   <ModelGrid cursor="0" data="qTimers" name="mgTimers" parent="panel" prefHeight="328px" prefWidth="257px">

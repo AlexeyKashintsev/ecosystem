@@ -5,7 +5,7 @@
  * @public 
  * @module WatchDog
  */
-define(['invoke'], function(invoke) {
+define('WatchDog', ['invoke'], function(invoke) {
     return function (aPeriod, watchFunc) {
         var enabled = true;
         var period = aPeriod;

@@ -5,7 +5,7 @@
  * @public 
  * @module ServFacade
  */
-define(['orm', 'rpc'], function (Orm, Lpc, ModuleName) {
+define('ServFacade', ['orm', 'rpc'], function (Orm, Lpc, ModuleName) {
     return function () {
         var self = this, model = Orm.loadModel(ModuleName);
         var dev = new Lpc.Proxy('Devices');
